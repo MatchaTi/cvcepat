@@ -7,7 +7,7 @@ function App() {
   console.log(data);
 
   return (
-    <div className='h-dvh w-dvw bg-black font-sans text-white'>
+    <div className='h-dvh w-dvw bg-white font-sans text-black'>
       <CVForm />
     </div>
   );
