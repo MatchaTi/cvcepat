@@ -1,21 +1,12 @@
 import clsx from 'clsx';
+import { themes } from '../constant/themes';
 import { useThemeStore } from '../store/useThemeStore';
 import { Theme } from '../type/theme';
 import { exportPDF } from '../util/PDF';
-import Brutalist from './form/Brutalist';
-import Elegant from './form/Elegant';
 import Formal from './form/Formal';
-import Playful from './form/Playful';
 
 export default function CVForm() {
   const { theme, setTheme } = useThemeStore();
-
-  const themes: { name: Theme; component: React.FC }[] = [
-    { name: 'formal', component: Formal },
-    { name: 'playful', component: Playful },
-    { name: 'elegant', component: Elegant },
-    { name: 'brutalist', component: Brutalist },
-  ];
 
   const SelectedTemplate = themes.find((t) => t.name === theme)?.component || Formal;
 
