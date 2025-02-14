@@ -1,3 +1,4 @@
+import { personalPlaceholders } from '../../constant/placeholders';
 import { useCVStore } from '../../store/useCVStore';
 
 export default function Playful() {
@@ -7,7 +8,7 @@ export default function Playful() {
     <>
       <h2>Playful</h2>
       <h2>Personal Info</h2>
-      {Object.keys(data.personalInfo).map((key) => (
+      {Object.keys(data.personalInfo).map((key, index) => (
         <input
           key={key}
           type='text'
@@ -18,7 +19,7 @@ export default function Playful() {
               personalInfo: { ...data.personalInfo, [key]: e.target.value },
             })
           }
-          placeholder={key}
+          placeholder={personalPlaceholders[index]}
         />
       ))}
 
@@ -39,7 +40,7 @@ export default function Playful() {
           key={key}
           type='text'
           className='bg-gray-100 p-4'
-          value={data.socialLinks[key as keyof typeof data.socialLinks]}
+          value={data.socialLinks[key as keyof typeof data.socialLinks]?.name}
           onChange={(e) =>
             setData({
               socialLinks: { ...data.socialLinks, [key]: e.target.value },

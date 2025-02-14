@@ -9,11 +9,11 @@ export interface PersonalInfoType {
   bio: string;
   photo?: string;
   socialLinks: {
-    linkedin?: string;
-    github?: string;
-    twitter?: string;
-    facebook?: string;
-    instagram?: string;
+    linkedin?: { name: string; url: string };
+    github?: { name: string; url: string };
+    twitter?: { name: string; url: string };
+    facebook?: { name: string; url: string };
+    instagram?: { name: string; url: string };
   };
   education: Array<{
     degree: string;

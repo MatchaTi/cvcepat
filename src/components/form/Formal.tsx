@@ -1,3 +1,4 @@
+import { personalPlaceholders, socialLinksPlaceholders, socialLinksURLPlaceholders } from '../../constant/placeholders';
 import { useCVStore } from '../../store/useCVStore';
 
 export default function Formal() {
@@ -7,7 +8,7 @@ export default function Formal() {
     <>
       <h2>Formal</h2>
       <h2>Personal Info</h2>
-      {Object.keys(data.personalInfo).map((key) => (
+      {Object.keys(data.personalInfo).map((key, index) => (
         <input
           key={key}
           type='text'
@@ -18,7 +19,7 @@ export default function Formal() {
               personalInfo: { ...data.personalInfo, [key]: e.target.value },
             })
           }
-          placeholder={key}
+          placeholder={personalPlaceholders[index]}
         />
       ))}
 
@@ -34,19 +35,39 @@ export default function Formal() {
       ></textarea>
 
       <h2>Social Media</h2>
-      {Object.keys(data.socialLinks).map((key) => (
-        <input
-          key={key}
-          type='text'
-          className='bg-gray-100 p-4'
-          value={data.socialLinks[key as keyof typeof data.socialLinks]}
-          onChange={(e) =>
-            setData({
-              socialLinks: { ...data.socialLinks, [key]: e.target.value },
-            })
-          }
-          placeholder={key}
-        />
+      {Object.keys(data.socialLinks).map((key, index) => (
+        <>
+          <input
+            key={key}
+            type='text'
+            className='bg-gray-100 p-4'
+            value={data.socialLinks[key as keyof typeof data.socialLinks]?.name}
+            onChange={(e) =>
+              setData({
+                socialLinks: {
+                  ...data.socialLinks,
+                  [key]: { ...data.socialLinks[key as keyof typeof data.socialLinks], name: e.target.value },
+                },
+              })
+            }
+            placeholder={socialLinksPlaceholders[index]}
+          />
+          <input
+            key={key}
+            type='text'
+            className='bg-gray-100 p-4'
+            value={data.socialLinks[key as keyof typeof data.socialLinks]?.url}
+            onChange={(e) =>
+              setData({
+                socialLinks: {
+                  ...data.socialLinks,
+                  [key]: { ...data.socialLinks[key as keyof typeof data.socialLinks], url: e.target.value },
+                },
+              })
+            }
+            placeholder={socialLinksURLPlaceholders[index]}
+          />
+        </>
       ))}
 
       <h2>Education</h2>
