@@ -40,7 +40,7 @@ export default function Playful() {
           key={key}
           type='text'
           className='bg-gray-100 p-4'
-          value={data.socialLinks[key as keyof typeof data.socialLinks]?.name}
+          value={data.socialLinks[key as keyof typeof data.socialLinks]}
           onChange={(e) =>
             setData({
               socialLinks: { ...data.socialLinks, [key]: e.target.value },

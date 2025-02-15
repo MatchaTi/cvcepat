@@ -1,4 +1,4 @@
-import { personalPlaceholders, socialLinksPlaceholders, socialLinksURLPlaceholders } from '../../constant/placeholders';
+import { personalPlaceholders, socialLinksPlaceholders } from '../../constant/placeholders';
 import { useCVStore } from '../../store/useCVStore';
 
 export default function Formal() {
@@ -36,38 +36,18 @@ export default function Formal() {
 
       <h2>Social Media</h2>
       {Object.keys(data.socialLinks).map((key, index) => (
-        <>
-          <input
-            key={key}
-            type='text'
-            className='bg-gray-100 p-4'
-            value={data.socialLinks[key as keyof typeof data.socialLinks]?.name}
-            onChange={(e) =>
-              setData({
-                socialLinks: {
-                  ...data.socialLinks,
-                  [key]: { ...data.socialLinks[key as keyof typeof data.socialLinks], name: e.target.value },
-                },
-              })
-            }
-            placeholder={socialLinksPlaceholders[index]}
-          />
-          <input
-            key={key}
-            type='text'
-            className='bg-gray-100 p-4'
-            value={data.socialLinks[key as keyof typeof data.socialLinks]?.url}
-            onChange={(e) =>
-              setData({
-                socialLinks: {
-                  ...data.socialLinks,
-                  [key]: { ...data.socialLinks[key as keyof typeof data.socialLinks], url: e.target.value },
-                },
-              })
-            }
-            placeholder={socialLinksURLPlaceholders[index]}
-          />
-        </>
+        <input
+          key={key}
+          type='text'
+          className='bg-gray-100 p-4'
+          value={data.socialLinks[key as keyof typeof data.socialLinks]}
+          onChange={(e) =>
+            setData({
+              socialLinks: { ...data.socialLinks, [key]: e.target.value },
+            })
+          }
+          placeholder={socialLinksPlaceholders[index]}
+        />
       ))}
 
       <h2>Education</h2>

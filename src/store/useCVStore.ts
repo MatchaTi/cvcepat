@@ -15,7 +15,7 @@ export const useCVStore = create<CVState>()(
     (set) => ({
       data: {
         personalInfo: {
-          fullName: 'Adi',
+          fullName: '',
           designation: '',
           phone: '',
           email: '',
@@ -24,11 +24,11 @@ export const useCVStore = create<CVState>()(
         bio: '',
         photo: '',
         socialLinks: {
-          facebook: { name: '', url: '' },
-          github: { name: '', url: '' },
-          instagram: { name: '', url: '' },
-          linkedin: { name: '', url: '' },
-          twitter: { name: '', url: '' },
+          facebook: '',
+          github: '',
+          instagram: '',
+          linkedin: '',
+          twitter: '',
         },
         education: [],
         experience: [],
