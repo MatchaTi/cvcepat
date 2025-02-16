@@ -1,0 +1,35 @@
+import clsx from 'clsx';
+import { personalPlaceholders } from '../constant/placeholders';
+import { useCVStore } from '../store/useCVStore';
+import { useThemeStore } from '../store/useThemeStore';
+
+export default function PersonalInformation() {
+  const { theme } = useThemeStore();
+  const { data, setData } = useCVStore();
+
+  return (
+    <section>
+      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' })}>Informasi Personal</h2>
+      <div className='grid grid-cols-2 gap-3'>
+        {Object.keys(data.personalInfo).map((key, index) => (
+          <input
+            key={key}
+            type='text'
+            className={clsx(
+              'p-3',
+              { 'border-retro-content/20 rounded-xl border': theme === 'retro' },
+              key === 'address' && 'col-span-2',
+            )}
+            value={data.personalInfo[key as keyof typeof data.personalInfo]}
+            onChange={(e) =>
+              setData({
+                personalInfo: { ...data.personalInfo, [key]: e.target.value },
+              })
+            }
+            placeholder={personalPlaceholders[index]}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}

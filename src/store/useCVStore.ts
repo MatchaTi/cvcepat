@@ -1,21 +1,13 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { PersonalInfoType } from '../type/personalInfo';
-
-interface CVState {
-  data: PersonalInfoType;
-  setData: (newData: Partial<PersonalInfoType>) => void;
-  addEducation: () => void;
-  updateEducation: (index: number, field: string, value: string) => void;
-  removeEducation: (index: number) => void;
-}
+import { CVState } from '../type/CV';
 
 export const useCVStore = create<CVState>()(
   persist(
     (set) => ({
       data: {
         personalInfo: {
-          fullName: 'Adi',
+          fullName: '',
           designation: '',
           phone: '',
           email: '',
@@ -30,10 +22,10 @@ export const useCVStore = create<CVState>()(
           linkedin: '',
           twitter: '',
         },
-        education: [],
-        experience: [],
-        skills: [],
-        projects: [],
+        education: [{ institute: '', degree: '', year: '' }],
+        experience: [{ company: '', position: '', year: '', description: '' }],
+        skills: [''],
+        projects: [{ projectName: '', description: '' }],
       },
       setData: (newData) =>
         set((state) => ({
@@ -59,6 +51,72 @@ export const useCVStore = create<CVState>()(
         set((state) => {
           const newEducation = state.data.education.filter((_, i) => i !== index);
           return { data: { ...state.data, education: newEducation } };
+        });
+      },
+      addExperience: () => {
+        set((state) => ({
+          data: {
+            ...state.data,
+            experience: [...state.data.experience, { company: '', position: '', year: '', description: '' }],
+          },
+        }));
+      },
+      updateExperience: (index, field, value) => {
+        set((state) => {
+          const newExperience = [...state.data.experience];
+          newExperience[index] = { ...newExperience[index], [field]: value };
+
+          return { data: { ...state.data, experience: newExperience } };
+        });
+      },
+      removeExperience: (index) => {
+        set((state) => {
+          const newExperience = state.data.experience.filter((_, i) => i !== index);
+          return { data: { ...state.data, experience: newExperience } };
+        });
+      },
+      addSkill: () => {
+        set((state) => ({
+          data: {
+            ...state.data,
+            skills: [...state.data.skills, ''],
+          },
+        }));
+      },
+      updateSkill: (index, value) => {
+        set((state) => {
+          const newSkills = [...state.data.skills];
+          newSkills[index] = value;
+
+          return { data: { ...state.data, skills: newSkills } };
+        });
+      },
+      removeSkill: (index) => {
+        set((state) => {
+          const newSkills = state.data.skills.filter((_, i) => i !== index);
+          return { data: { ...state.data, skills: newSkills } };
+        });
+      },
+      addProject: () => {
+        set((state) => ({
+          data: {
+            ...state.data,
+            projects: [...state.data.projects, { projectName: '', description: '' }],
+          },
+        }));
+      },
+      updateProject: (index, field, value) => {
+        set((state) => {
+          const newProjects = [...state.data.projects];
+          newProjects[index] = { ...newProjects[index], [field]: value };
+
+          return { data: { ...state.data, projects: newProjects } };
+        });
+      },
+      removeProject: (index) => {
+        set((state) => {
+          const newProjects = state.data.projects.filter((_, i) => i !== index);
+          return { data: { ...state.data, projects: newProjects } };
         });
       },
     }),
