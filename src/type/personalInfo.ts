@@ -24,7 +24,8 @@ export interface PersonalInfoType {
     company: string;
     position: string;
     year: string;
+    description: string;
   }>;
   skills: Array<string>;
-  projects: Array<{ projectName: string; description: string; link?: string }>;
+  projects: Array<{ projectName: string; description: string }>;
 }
