@@ -1,4 +1,4 @@
-export type Theme = 'formal' | 'playful' | 'elegant' | 'brutalist';
+export type Theme = 'light' | 'dark' | 'retro' | 'luxury' | 'pastel';
 
 export interface ThemeState {
   theme: Theme;
