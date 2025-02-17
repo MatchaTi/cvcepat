@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 @import 'tailwindcss';
 
 * {
@@ -10,6 +12,8 @@
   /* typography */
   --font-abhaya-libre: 'Abhaya Libre', serif;
   --font-inter: 'Inter', sans-serif;
+  --font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-inconsolata: 'Inconsolata', monospace;
 
   /* colors */
   /* primary colors */
@@ -27,6 +31,13 @@
   --color-luxury-accent: #1e1e1e;
   --color-luxury-darker: #0f0f0f;
   --color-luxury-content: #ffffff;
+
+  /* light theme */
+  --color-light-base: #ffffff;
+  --color-light-accent: #f1f5f9;
+  --color-light-darker: #e2e8f0;
+  --color-light-content: #64748b;
+  --color-light-content-darker: #334155;
 }
 
 @media print {

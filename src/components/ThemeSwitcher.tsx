@@ -16,6 +16,7 @@ export default function ThemeSwitcher() {
           className={clsx('flex cursor-pointer items-center gap-1 p-3 active:scale-95', {
             'bg-retro-accent text-retro-content hover:bg-retro-darker rounded-xl': theme === 'retro',
             'bg-luxury-accent text-luxury-content hover:bg-luxury-darker rounded-xl': theme === 'luxury',
+            'bg-light-accent text-light-content hover:bg-light-darker rounded-xl': theme === 'light',
           })}
         >
           <Icon icon={theme == name ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />

@@ -9,7 +9,7 @@ export default function SocialMedia() {
 
   return (
     <section>
-      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' || theme === 'luxury' })}>
+      <h2 className={clsx('mb-3 text-xl font-bold', { uppercase: theme === 'retro' || theme === 'luxury' })}>
         Sosial Media
       </h2>
       <div className='grid grid-cols-2 gap-3'>
@@ -18,9 +18,10 @@ export default function SocialMedia() {
             key={key}
             type='text'
             className={clsx(
-              'p-3',
-              { 'border-retro-content/20 font-inter rounded-xl border': theme === 'retro' },
-              { 'border-luxury-content/10 font-inter rounded-xl border': theme === 'luxury' },
+              'border p-3',
+              { 'border-retro-content/20 font-inter rounded-xl': theme === 'retro' },
+              { 'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury' },
+              { 'border-light-content/10 font-inter rounded-xl': theme === 'light' },
               key === 'twitter' && 'col-span-2',
             )}
             value={data.socialLinks[key as keyof typeof data.socialLinks]}

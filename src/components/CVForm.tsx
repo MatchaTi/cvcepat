@@ -17,12 +17,14 @@ export default function CVForm() {
       className={clsx('mx-auto h-[297mm] min-h-fit w-full max-w-[210mm] space-y-8 p-6', {
         'bg-retro-base text-retro-content shadow-retro-content/10 shadow': theme === 'retro',
         'bg-luxury-base text-luxury-content shadow-luxury-content/10 shadow': theme === 'luxury',
+        'bg-light-base text-light-content shadow-light-content/10 shadow': theme === 'light',
       })}
     >
       <section
         className={clsx('rounded-xl border p-3', {
           'border-retro-content/20': theme === 'retro',
           'border-luxury-content/10': theme === 'luxury',
+          'border-light-content/10': theme === 'light',
         })}
       >
         <div className='mb-2 flex items-center gap-1'>
