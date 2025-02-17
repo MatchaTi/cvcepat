@@ -9,8 +9,8 @@ export default function Project() {
 
   return (
     <section>
-      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' })}>
-        Proyek yang Pernah Dikerjakan
+      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' || theme === 'luxury' })}>
+        Proyek atau Penghargaan
       </h2>
       {data.projects.map(({ projectName, description }, index) => (
         <div key={index} className='mb-3 flex items-center gap-3'>
@@ -21,12 +21,14 @@ export default function Project() {
               onChange={(e) => updateProject(index, 'projectName', e.target.value)}
               className={clsx('w-full p-3', {
                 'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+                'border-luxury-content/10 font-inter rounded-xl border': theme === 'luxury',
               })}
               placeholder='Nama Project'
             />
             <textarea
               className={clsx('field-sizing-content max-h-40 w-full p-3', {
                 'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+                'border-luxury-content/10 font-inter rounded-xl border': theme === 'luxury',
               })}
               value={description}
               onChange={(e) => updateProject(index, 'description', e.target.value)}
@@ -35,7 +37,7 @@ export default function Project() {
           </div>
           <button
             className={clsx('flex w-fit cursor-pointer p-3 active:scale-95', {
-              'bg-red-custom rounded-xl': theme === 'retro',
+              'bg-red-custom rounded-xl': theme === 'retro' || theme === 'luxury',
             })}
             onClick={() => removeProject(index)}
           >
@@ -47,6 +49,7 @@ export default function Project() {
         onClick={addProject}
         className={clsx('mx-auto flex cursor-pointer items-center gap-1 active:scale-95', {
           'bg-retro-content text-retro-base rounded-xl p-3': theme === 'retro',
+          'bg-luxury-content text-luxury-base rounded-xl p-3': theme === 'luxury',
         })}
       >
         <Icon icon='ic:baseline-plus' />

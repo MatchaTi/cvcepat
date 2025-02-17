@@ -2,13 +2,13 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import { socialMediaIcons } from '../../constant/SocialMediaIcons';
 import { useCVStore } from '../../store/useCVStore';
 
-export default function Retro() {
+export default function Luxury() {
   const { data } = useCVStore();
 
   return (
-    <section className='bg-retro-base shadow-retro-content/10 mx-auto grid h-[297mm] min-h-fit w-[210mm] grid-cols-6 gap-5 px-6 py-16 shadow'>
+    <section className='bg-luxury-base shadow-luxury-content/10 mx-auto grid h-[297mm] min-h-fit w-[210mm] grid-cols-6 gap-5 px-6 py-16 shadow'>
       <section className='col-span-2 space-y-5'>
-        <div className='border-retro-content flex items-center justify-between border-b uppercase'>
+        <div className='border-luxury-content/10 flex items-center justify-between border-b uppercase'>
           <span>Contacts</span>
           <span>01</span>
         </div>
@@ -29,7 +29,7 @@ export default function Retro() {
         <div className='grid grid-cols-4 gap-5'>
           <div className='col-span-2'>
             <section className='space-y-5'>
-              <div className='border-retro-content flex items-center justify-between border-b uppercase'>
+              <div className='border-luxury-content/10 flex items-center justify-between border-b uppercase'>
                 <span>Experience</span>
                 <span>02</span>
               </div>
@@ -50,7 +50,7 @@ export default function Retro() {
           <div className='col-span-2'>
             <div className='space-y-8'>
               <section className='space-y-5'>
-                <div className='border-retro-content flex items-center justify-between border-b uppercase'>
+                <div className='border-luxury-content/10 flex items-center justify-between border-b uppercase'>
                   <span>Skills</span>
                   <span>03</span>
                 </div>
@@ -62,7 +62,7 @@ export default function Retro() {
               </section>
 
               <section className='space-y-5'>
-                <div className='border-retro-content flex items-center justify-between border-b uppercase'>
+                <div className='border-luxury-content/10 flex items-center justify-between border-b uppercase'>
                   <span>Education</span>
                   <span>04</span>
                 </div>
@@ -78,7 +78,7 @@ export default function Retro() {
               </section>
 
               <section className='space-y-5'>
-                <div className='border-retro-content flex items-center justify-between border-b uppercase'>
+                <div className='border-luxury-content/10 flex items-center justify-between border-b uppercase'>
                   <span>Projects & Awards</span>
                   <span>05</span>
                 </div>

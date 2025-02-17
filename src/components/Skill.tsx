@@ -9,13 +9,16 @@ export default function Skill() {
 
   return (
     <section>
-      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' })}>Kemampuan</h2>
+      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' || theme === 'luxury' })}>
+        Kemampuan
+      </h2>
       <div className='flex flex-wrap gap-3'>
         {data.skills.map((skill, index) => (
           <div
             key={index}
             className={clsx('flex w-auto items-center gap-3 pr-3', {
               'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+              'border-luxury-content/10 font-inter rounded-xl border': theme === 'luxury',
             })}
           >
             <input
@@ -27,7 +30,7 @@ export default function Skill() {
             />
             <button
               className={clsx('w-fit cursor-pointer p-2 active:scale-95', {
-                'bg-red-custom rounded-xl': theme === 'retro',
+                'bg-red-custom rounded-xl': theme === 'retro' || theme === 'luxury',
               })}
               onClick={() => removeSkill(index)}
             >
@@ -39,6 +42,7 @@ export default function Skill() {
           onClick={addSkill}
           className={clsx('flex cursor-pointer items-center gap-1 active:scale-95', {
             'bg-retro-content text-retro-base rounded-xl p-3': theme === 'retro',
+            'bg-luxury-content text-luxury-base rounded-xl p-3': theme === 'luxury',
           })}
         >
           <Icon icon='ic:baseline-plus' />

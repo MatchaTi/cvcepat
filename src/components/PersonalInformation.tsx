@@ -9,7 +9,9 @@ export default function PersonalInformation() {
 
   return (
     <section>
-      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' })}>Informasi Personal</h2>
+      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' || theme === 'luxury' })}>
+        Informasi Personal
+      </h2>
       <div className='grid grid-cols-2 gap-3'>
         {Object.keys(data.personalInfo).map((key, index) => (
           <input
@@ -18,6 +20,7 @@ export default function PersonalInformation() {
             className={clsx(
               'p-3',
               { 'font-inter border-retro-content/20 rounded-xl border': theme === 'retro' },
+              { 'font-inter border-luxury-content/10 rounded-xl border': theme === 'luxury' },
               key === 'address' && 'col-span-2',
             )}
             value={data.personalInfo[key as keyof typeof data.personalInfo]}

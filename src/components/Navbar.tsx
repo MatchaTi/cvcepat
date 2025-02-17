@@ -32,6 +32,7 @@ export default function Navbar() {
         <div
           className={clsx('flex items-center gap-3 p-3', {
             'bg-retro-accent text-retro-content rounded-xl': theme === 'retro',
+            'bg-luxury-accent text-luxury-content rounded-xl': theme === 'luxury',
           })}
         >
           <button
@@ -62,6 +63,7 @@ export default function Navbar() {
           onClick={setDummy}
           className={clsx('flex cursor-pointer items-center gap-1 p-3 active:scale-95', {
             'bg-retro-accent text-retro-content hover:bg-retro-darker rounded-xl': theme === 'retro',
+            'bg-luxury-accent text-luxury-content hover:bg-luxury-darker rounded-xl': theme === 'luxury',
           })}
         >
           <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
@@ -75,6 +77,7 @@ export default function Navbar() {
         disabled={status === 'editor'}
         className={clsx('flex cursor-pointer items-center gap-1 p-3 active:scale-95', {
           'bg-retro-content text-retro-base rounded-xl': theme === 'retro',
+          'bg-luxury-content text-luxury-base rounded-xl': theme === 'luxury',
         })}
       >
         <Icon icon='material-symbols:download' />

@@ -21,6 +21,12 @@
   --color-retro-accent: #e4d8b4;
   --color-retro-darker: #dacb9a;
   --color-retro-content: #282425;
+
+  /* luxury theme */
+  --color-luxury-base: #1b1b1b;
+  --color-luxury-accent: #1e1e1e;
+  --color-luxury-darker: #0f0f0f;
+  --color-luxury-content: #ffffff;
 }
 
 @media print {
