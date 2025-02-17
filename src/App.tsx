@@ -19,6 +19,7 @@ export default function App() {
       className={clsx('min-h-fit w-full pb-10', {
         'bg-retro-base text-retro-content font-abhaya-libre': theme === 'retro',
         'bg-luxury-base text-luxury-content font-abhaya-libre': theme === 'luxury',
+        'bg-light-base text-light-content font-plus-jakarta-sans': theme === 'light',
       })}
     >
       <Navbar />
