@@ -9,9 +9,7 @@ export default function Project() {
 
   return (
     <section>
-      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' })}>
-        Proyek yang Pernah Dikerjakan
-      </h2>
+      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' })}>Proyek atau Penghargaan</h2>
       {data.projects.map(({ projectName, description }, index) => (
         <div key={index} className='mb-3 flex items-center gap-3'>
           <div className='grid w-full gap-3'>

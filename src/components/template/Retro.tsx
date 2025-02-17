@@ -79,7 +79,7 @@ export default function Retro() {
 
               <section className='space-y-5'>
                 <div className='border-retro-content flex items-center justify-between border-b uppercase'>
-                  <span>Projects</span>
+                  <span>Projects & Awards</span>
                   <span>05</span>
                 </div>
                 <div className='font-inter space-y-5'>
