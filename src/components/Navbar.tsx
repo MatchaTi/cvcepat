@@ -1,12 +1,25 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import clsx from 'clsx';
+import { useCVStore } from '../store/useCVStore';
 import { useThemeStore } from '../store/useThemeStore';
 import { useWorkspaceStore } from '../store/useWorkspaceStore';
 import { exportPDF } from '../util/PDF';
 
 export default function Navbar() {
   const { theme } = useThemeStore();
+  const { isDummyData, toggleDummy, setDummyData, clearData } = useCVStore();
   const { status, setStatus } = useWorkspaceStore();
+
+  const setDummy = () => {
+    toggleDummy();
+    if (!isDummyData) {
+      setDummyData();
+      setStatus('preview');
+    } else {
+      clearData();
+      setStatus('editor');
+    }
+  };
 
   return (
     <nav className='flex items-center justify-between p-6'>
@@ -46,11 +59,12 @@ export default function Navbar() {
         </div>
         <button
           type='button'
+          onClick={setDummy}
           className={clsx('flex cursor-pointer items-center gap-1 p-3 active:scale-95', {
             'bg-retro-accent text-retro-content hover:bg-retro-darker rounded-xl': theme === 'retro',
           })}
         >
-          <Icon icon={theme == 'retro' ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
+          <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
           <span>Contoh</span>
         </button>
       </div>

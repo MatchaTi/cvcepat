@@ -2,7 +2,11 @@ import { PersonalInfoType } from './personalInfo';
 
 export interface CVState {
   data: PersonalInfoType;
+  isDummyData: boolean;
+  toggleDummy: () => void;
   setData: (newData: Partial<PersonalInfoType>) => void;
+  setDummyData: () => void;
+  clearData: () => void;
   addEducation: () => void;
   updateEducation: (index: number, field: string, value: string) => void;
   removeEducation: (index: number) => void;
