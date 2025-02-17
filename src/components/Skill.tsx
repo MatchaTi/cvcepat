@@ -15,7 +15,7 @@ export default function Skill() {
           <div
             key={index}
             className={clsx('flex w-auto items-center gap-3 pr-3', {
-              'border-retro-content/20 rounded-xl border': theme === 'retro',
+              'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
             })}
           >
             <input

@@ -17,26 +17,32 @@ export default function Experience() {
               type='text'
               value={company}
               onChange={(e) => updateExperience(index, 'company', e.target.value)}
-              className={clsx('w-full p-3', { 'border-retro-content/20 rounded-xl border': theme === 'retro' })}
+              className={clsx('w-full p-3', {
+                'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+              })}
               placeholder='Company'
             />
             <input
               type='text'
               value={position}
               onChange={(e) => updateExperience(index, 'position', e.target.value)}
-              className={clsx('w-full p-3', { 'border-retro-content/20 rounded-xl border': theme === 'retro' })}
+              className={clsx('w-full p-3', {
+                'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+              })}
               placeholder='Position'
             />
             <input
               type='text'
               value={year}
               onChange={(e) => updateExperience(index, 'year', e.target.value)}
-              className={clsx('w-full p-3', { 'border-retro-content/20 rounded-xl border': theme === 'retro' })}
+              className={clsx('w-full p-3', {
+                'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+              })}
               placeholder='Year'
             />
             <textarea
               className={clsx('col-span-3 field-sizing-content max-h-40 w-full p-3', {
-                'border-retro-content/20 rounded-xl border': theme === 'retro',
+                'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
               })}
               value={description}
               onChange={(e) => updateExperience(index, 'description', e.target.value)}

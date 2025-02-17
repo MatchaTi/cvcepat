@@ -11,7 +11,7 @@ export default function Bio() {
       <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' })}>Bio</h2>
       <textarea
         className={clsx('field-sizing-content max-h-40 w-full p-3', {
-          'border-retro-content/20 rounded-xl border': theme === 'retro',
+          'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
         })}
         value={data.bio}
         onChange={(e) => setData({ bio: e.target.value })}

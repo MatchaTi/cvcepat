@@ -17,7 +17,7 @@ export default function SocialMedia() {
             type='text'
             className={clsx(
               'p-3',
-              { 'border-retro-content/20 rounded-xl border': theme === 'retro' },
+              { 'border-retro-content/20 font-inter rounded-xl border': theme === 'retro' },
               key === 'address' && 'col-span-2',
             )}
             value={data.socialLinks[key as keyof typeof data.socialLinks]}

@@ -17,7 +17,7 @@ export default function PersonalInformation() {
             type='text'
             className={clsx(
               'p-3',
-              { 'border-retro-content/20 rounded-xl border': theme === 'retro' },
+              { 'font-inter border-retro-content/20 rounded-xl border': theme === 'retro' },
               key === 'address' && 'col-span-2',
             )}
             value={data.personalInfo[key as keyof typeof data.personalInfo]}

@@ -15,14 +15,18 @@ export default function Education() {
           <input
             type='text'
             value={institute}
-            className={clsx('w-full p-3', { 'border-retro-content/20 rounded-xl border': theme === 'retro' })}
+            className={clsx('w-full p-3', {
+              'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+            })}
             onChange={(e) => updateEducation(index, 'institute', e.target.value)}
             placeholder='School'
           />
           <input
             type='text'
             value={degree}
-            className={clsx('w-full p-3', { 'border-retro-content/20 rounded-xl border': theme === 'retro' })}
+            className={clsx('w-full p-3', {
+              'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+            })}
             onChange={(e) => updateEducation(index, 'degree', e.target.value)}
             placeholder='Degree'
           />
@@ -30,7 +34,9 @@ export default function Education() {
             type='text'
             value={year}
             onChange={(e) => updateEducation(index, 'year', e.target.value)}
-            className={clsx('w-full p-3', { 'border-retro-content/20 rounded-xl border': theme === 'retro' })}
+            className={clsx('w-full p-3', {
+              'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+            })}
             placeholder='Year'
           />
           <button
