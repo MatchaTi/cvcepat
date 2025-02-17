@@ -9,7 +9,9 @@ export default function Education() {
 
   return (
     <section>
-      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' })}>Pendidikan</h2>
+      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' || theme === 'luxury' })}>
+        Pendidikan
+      </h2>
       {data.education.map(({ degree, institute, year }, index) => (
         <div key={index} className='mb-3 flex items-center gap-3'>
           <input
@@ -17,6 +19,7 @@ export default function Education() {
             value={institute}
             className={clsx('w-full p-3', {
               'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+              'border-luxury-content/10 font-inter rounded-xl border': theme === 'luxury',
             })}
             onChange={(e) => updateEducation(index, 'institute', e.target.value)}
             placeholder='School'
@@ -26,6 +29,7 @@ export default function Education() {
             value={degree}
             className={clsx('w-full p-3', {
               'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+              'border-luxury-content/10 font-inter rounded-xl border': theme === 'luxury',
             })}
             onChange={(e) => updateEducation(index, 'degree', e.target.value)}
             placeholder='Degree'
@@ -36,12 +40,13 @@ export default function Education() {
             onChange={(e) => updateEducation(index, 'year', e.target.value)}
             className={clsx('w-full p-3', {
               'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+              'border-luxury-content/10 font-inter rounded-xl border': theme === 'luxury',
             })}
             placeholder='Year'
           />
           <button
             className={clsx('flex w-fit cursor-pointer p-3 active:scale-95', {
-              'bg-red-custom rounded-xl': theme === 'retro',
+              'bg-red-custom rounded-xl': theme === 'retro' || theme === 'luxury',
             })}
             onClick={() => removeEducation(index)}
           >
@@ -53,6 +58,7 @@ export default function Education() {
         onClick={addEducation}
         className={clsx('mx-auto flex cursor-pointer items-center gap-1 active:scale-95', {
           'bg-retro-content text-retro-base rounded-xl p-3': theme === 'retro',
+          'bg-luxury-content text-luxury-base rounded-xl p-3': theme === 'luxury',
         })}
       >
         <Icon icon='ic:baseline-plus' />

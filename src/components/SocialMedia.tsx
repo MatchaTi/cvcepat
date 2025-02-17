@@ -9,7 +9,9 @@ export default function SocialMedia() {
 
   return (
     <section>
-      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' })}>Sosial Media</h2>
+      <h2 className={clsx('mb-3', { 'text-xl font-bold uppercase': theme === 'retro' || theme === 'luxury' })}>
+        Sosial Media
+      </h2>
       <div className='grid grid-cols-2 gap-3'>
         {Object.keys(data.socialLinks).map((key, index) => (
           <input
@@ -18,7 +20,8 @@ export default function SocialMedia() {
             className={clsx(
               'p-3',
               { 'border-retro-content/20 font-inter rounded-xl border': theme === 'retro' },
-              key === 'address' && 'col-span-2',
+              { 'border-luxury-content/10 font-inter rounded-xl border': theme === 'luxury' },
+              key === 'twitter' && 'col-span-2',
             )}
             value={data.socialLinks[key as keyof typeof data.socialLinks]}
             onChange={(e) =>
