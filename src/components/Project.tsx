@@ -19,12 +19,14 @@ export default function Project() {
               type='text'
               value={projectName}
               onChange={(e) => updateProject(index, 'projectName', e.target.value)}
-              className={clsx('w-full p-3', { 'border-retro-content/20 rounded-xl border': theme === 'retro' })}
+              className={clsx('w-full p-3', {
+                'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
+              })}
               placeholder='Nama Project'
             />
             <textarea
               className={clsx('field-sizing-content max-h-40 w-full p-3', {
-                'border-retro-content/20 rounded-xl border': theme === 'retro',
+                'border-retro-content/20 font-inter rounded-xl border': theme === 'retro',
               })}
               value={description}
               onChange={(e) => updateProject(index, 'description', e.target.value)}
