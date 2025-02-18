@@ -38,6 +38,13 @@
   --color-light-darker: #e2e8f0;
   --color-light-content: #64748b;
   --color-light-content-darker: #334155;
+
+  /* dark theme */
+  --color-dark-base: #0f172a;
+  --color-dark-accent: #334155;
+  --color-dark-darker: #475569;
+  --color-dark-content: #e2e8f0;
+  --color-dark-content-lighter: #e2e8f0;
 }
 
 @media print {

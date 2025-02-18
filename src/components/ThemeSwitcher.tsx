@@ -17,6 +17,7 @@ export default function ThemeSwitcher() {
             'bg-retro-accent text-retro-content hover:bg-retro-darker rounded-xl': theme === 'retro',
             'bg-luxury-accent text-luxury-content hover:bg-luxury-darker rounded-xl': theme === 'luxury',
             'bg-light-accent text-light-content hover:bg-light-darker rounded-xl': theme === 'light',
+            'bg-dark-accent text-dark-content hover:bg-dark-darker rounded-xl': theme === 'dark',
           })}
         >
           <Icon icon={theme == name ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />

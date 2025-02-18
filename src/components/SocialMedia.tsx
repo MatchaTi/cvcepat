@@ -22,6 +22,7 @@ export default function SocialMedia() {
               { 'border-retro-content/20 font-inter rounded-xl': theme === 'retro' },
               { 'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury' },
               { 'border-light-content/10 font-inter rounded-xl': theme === 'light' },
+              { 'border-dark-content/10 font-inter rounded-xl': theme === 'dark' },
               key === 'twitter' && 'col-span-2',
             )}
             value={data.socialLinks[key as keyof typeof data.socialLinks]}
