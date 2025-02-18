@@ -24,6 +24,7 @@ export default function Experience() {
                 'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
+                'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
               })}
               placeholder='Company'
             />
@@ -36,6 +37,7 @@ export default function Experience() {
                 'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
+                'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
               })}
               placeholder='Position'
             />
@@ -48,6 +50,7 @@ export default function Experience() {
                 'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
+                'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
               })}
               placeholder='Year'
             />
@@ -57,6 +60,7 @@ export default function Experience() {
                 'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
+                'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
               })}
               value={description}
               onChange={(e) => updateExperience(index, 'description', e.target.value)}
@@ -68,6 +72,7 @@ export default function Experience() {
               'rounded-xl': theme === 'retro' || theme === 'luxury',
               'text-light-base rounded-xl': theme === 'light',
               'text-dark-base rounded-xl': theme === 'dark',
+              'text-elegant-base rounded-xl': theme === 'elegant',
             })}
             onClick={() => removeExperience(index)}
           >
@@ -82,6 +87,7 @@ export default function Experience() {
           'bg-luxury-content text-luxury-base rounded-xl p-3': theme === 'luxury',
           'bg-light-content text-light-base rounded-xl p-3': theme === 'light',
           'bg-dark-content text-dark-base rounded-xl p-3': theme === 'dark',
+          'bg-elegant-content text-elegant-base rounded-xl p-3': theme === 'elegant',
         })}
       >
         <Icon icon='ic:baseline-plus' />

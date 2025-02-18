@@ -21,6 +21,7 @@ export default function Skill() {
               'border-luxury-content/10 font-inter rounded-xl border': theme === 'luxury',
               'border-light-content/10 font-inter rounded-xl border': theme === 'light',
               'border-dark-content/10 font-inter rounded-xl border': theme === 'dark',
+              'border-elegant-content/10 font-lato rounded-xl border': theme === 'elegant',
             })}
           >
             <input
@@ -35,6 +36,7 @@ export default function Skill() {
                 'rounded-xl': theme === 'retro' || theme === 'luxury',
                 'text-light-base rounded-xl': theme === 'light',
                 'text-dark-base rounded-xl': theme === 'dark',
+                'text-elegant-base rounded-xl': theme === 'elegant',
               })}
               onClick={() => removeSkill(index)}
             >
@@ -49,6 +51,7 @@ export default function Skill() {
             'bg-luxury-content text-luxury-base rounded-xl p-3': theme === 'luxury',
             'bg-light-content text-light-base rounded-xl p-3': theme === 'light',
             'bg-dark-content text-dark-base rounded-xl p-3': theme === 'dark',
+            'bg-elegant-content text-elegant-base rounded-xl p-3': theme === 'elegant',
           })}
         >
           <Icon icon='ic:baseline-plus' />
