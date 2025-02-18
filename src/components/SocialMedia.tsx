@@ -19,10 +19,13 @@ export default function SocialMedia() {
             type='text'
             className={clsx(
               'border p-3',
-              { 'border-retro-content/20 font-inter rounded-xl': theme === 'retro' },
-              { 'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury' },
-              { 'border-light-content/10 font-inter rounded-xl': theme === 'light' },
-              { 'border-dark-content/10 font-inter rounded-xl': theme === 'dark' },
+              {
+                'border-retro-content/20 font-inter rounded-xl': theme === 'retro',
+                'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
+                'border-light-content/10 font-inter rounded-xl': theme === 'light',
+                'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
+                'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
+              },
               key === 'twitter' && 'col-span-2',
             )}
             value={data.socialLinks[key as keyof typeof data.socialLinks]}

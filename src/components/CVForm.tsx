@@ -19,6 +19,7 @@ export default function CVForm() {
         'bg-luxury-base text-luxury-content shadow-luxury-content/10 shadow': theme === 'luxury',
         'bg-light-base text-light-content shadow-light-content/10 shadow': theme === 'light',
         'bg-dark-base text-dark-content shadow-dark-content/10 shadow': theme === 'dark',
+        'bg-elegant-base text-elegant-content shadow-elegant-content/10 shadow': theme === 'elegant',
       })}
     >
       <section
@@ -27,13 +28,19 @@ export default function CVForm() {
           'border-luxury-content/10': theme === 'luxury',
           'border-light-content/10': theme === 'light',
           'border-dark-content/10': theme === 'dark',
+          'border-elegant-content/10': theme === 'elegant',
         })}
       >
         <div className='mb-2 flex items-center gap-1'>
           <Icon icon='ci:note-edit' />
           <span>Catatan</span>
         </div>
-        <div className={clsx({ 'font-inter text-sm': theme === 'retro' || theme === 'luxury' })}>
+        <div
+          className={clsx({
+            'font-inter text-sm': theme === 'retro' || theme === 'luxury',
+            'font-lato': theme === 'elegant',
+          })}
+        >
           Tidak semua data yang ada pada form ditampilkan pada beberapa template!
         </div>
       </section>

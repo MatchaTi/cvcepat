@@ -23,6 +23,7 @@ export default function PersonalInformation() {
               { 'font-inter border-luxury-content/10 rounded-xl': theme === 'luxury' },
               { 'font-inter border-light-content/10 rounded-xl': theme === 'light' },
               { 'font-inter border-dark-content/10 rounded-xl': theme === 'dark' },
+              { 'font-lato border-elegant-content/10 rounded-xl': theme === 'elegant' },
               key === 'address' && 'col-span-2',
             )}
             value={data.personalInfo[key as keyof typeof data.personalInfo]}

@@ -21,6 +21,7 @@ export default function App() {
         'bg-luxury-base text-luxury-content font-abhaya-libre': theme === 'luxury',
         'bg-light-base text-light-content font-plus-jakarta-sans': theme === 'light',
         'bg-dark-base text-dark-content font-plus-jakarta-sans': theme === 'dark',
+        'bg-elegant-base text-elegant-content font-spectral': theme === 'elegant',
       })}
     >
       <Navbar />

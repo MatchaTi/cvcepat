@@ -15,6 +15,7 @@ export default function Bio() {
           'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
           'border-light-content/10 font-inter rounded-xl': theme === 'light',
           'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
+          'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
         })}
         value={data.bio}
         onChange={(e) => setData({ bio: e.target.value })}

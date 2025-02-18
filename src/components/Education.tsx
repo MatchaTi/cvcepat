@@ -22,6 +22,7 @@ export default function Education() {
               'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
               'border-light-content/10 font-inter rounded-xl': theme === 'light',
               'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
+              'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
             })}
             onChange={(e) => updateEducation(index, 'institute', e.target.value)}
             placeholder='School'
@@ -34,6 +35,7 @@ export default function Education() {
               'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
               'border-light-content/10 font-inter rounded-xl': theme === 'light',
               'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
+              'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
             })}
             onChange={(e) => updateEducation(index, 'degree', e.target.value)}
             placeholder='Degree'
@@ -47,6 +49,7 @@ export default function Education() {
               'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
               'border-light-content/10 font-inter rounded-xl': theme === 'light',
               'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
+              'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
             })}
             placeholder='Year'
           />
@@ -55,6 +58,7 @@ export default function Education() {
               'rounded-xl': theme === 'retro' || theme === 'luxury',
               'text-light-base rounded-xl': theme === 'light',
               'text-dark-base rounded-xl': theme === 'dark',
+              'text-elegant-base rounded-xl': theme === 'elegant',
             })}
             onClick={() => removeEducation(index)}
           >
@@ -69,6 +73,7 @@ export default function Education() {
           'bg-luxury-content text-luxury-base rounded-xl p-3': theme === 'luxury',
           'bg-light-content text-light-base rounded-xl p-3': theme === 'light',
           'bg-dark-content text-dark-base rounded-xl p-3': theme === 'dark',
+          'bg-elegant-content text-elegant-base rounded-xl p-3': theme === 'elegant',
         })}
       >
         <Icon icon='ic:baseline-plus' />
