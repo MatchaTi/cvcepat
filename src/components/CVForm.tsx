@@ -18,6 +18,7 @@ export default function CVForm() {
         'bg-retro-base text-retro-content shadow-retro-content/10 shadow': theme === 'retro',
         'bg-luxury-base text-luxury-content shadow-luxury-content/10 shadow': theme === 'luxury',
         'bg-light-base text-light-content shadow-light-content/10 shadow': theme === 'light',
+        'bg-dark-base text-dark-content shadow-dark-content/10 shadow': theme === 'dark',
       })}
     >
       <section
@@ -25,6 +26,7 @@ export default function CVForm() {
           'border-retro-content/20': theme === 'retro',
           'border-luxury-content/10': theme === 'luxury',
           'border-light-content/10': theme === 'light',
+          'border-dark-content/10': theme === 'dark',
         })}
       >
         <div className='mb-2 flex items-center gap-1'>

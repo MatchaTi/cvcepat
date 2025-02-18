@@ -23,6 +23,7 @@ export default function Project() {
                 'border-retro-content/20 font-inter rounded-xl': theme === 'retro',
                 'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
+                'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
               })}
               placeholder='Nama Project'
             />
@@ -31,6 +32,7 @@ export default function Project() {
                 'border-retro-content/20 font-inter rounded-xl': theme === 'retro',
                 'border-luxury-content/10 font-inter rounded-xl': theme === 'luxury',
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
+                'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
               })}
               value={description}
               onChange={(e) => updateProject(index, 'description', e.target.value)}
@@ -41,6 +43,7 @@ export default function Project() {
             className={clsx('bg-red-custom flex w-fit cursor-pointer p-3 active:scale-95', {
               'rounded-xl': theme === 'retro' || theme === 'luxury',
               'text-light-base rounded-xl': theme === 'light',
+              'text-dark-base rounded-xl': theme === 'dark',
             })}
             onClick={() => removeProject(index)}
           >
@@ -54,6 +57,7 @@ export default function Project() {
           'bg-retro-content text-retro-base rounded-xl p-3': theme === 'retro',
           'bg-luxury-content text-luxury-base rounded-xl p-3': theme === 'luxury',
           'bg-light-content text-light-base rounded-xl p-3': theme === 'light',
+          'bg-dark-content text-dark-base rounded-xl p-3': theme === 'dark',
         })}
       >
         <Icon icon='ic:baseline-plus' />
