@@ -53,7 +53,7 @@ export default function Elegant() {
               </div>
               <div className='flex items-center justify-end gap-1 text-xs font-light'>
                 <Icon icon='clarity:calendar-line' />
-                <span>{year}</span>
+                <span className='mt-0.5'>{year}</span>
               </div>
             </div>
             <div className='leading-tight'>{description}</div>
@@ -87,7 +87,7 @@ export default function Elegant() {
                   </div>
                   <div className='flex items-center gap-1 text-xs'>
                     <Icon icon='clarity:calendar-line' />
-                    <span>{year}</span>
+                    <span className='mt-0.5'>{year}</span>
                   </div>
                 </div>
               </div>
