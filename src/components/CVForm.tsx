@@ -14,6 +14,7 @@ export default function CVForm() {
 
   return (
     <div
+      id='cvForm'
       className={clsx('mx-auto h-[297mm] min-h-fit w-full max-w-[210mm] space-y-8 p-6', {
         'bg-retro-base text-retro-content shadow-retro-content/10 shadow': theme === 'retro',
         'bg-luxury-base text-luxury-content shadow-luxury-content/10 shadow': theme === 'luxury',

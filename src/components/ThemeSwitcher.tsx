@@ -7,7 +7,7 @@ export default function ThemeSwitcher() {
   const { theme, setTheme } = useThemeStore();
 
   return (
-    <div className='mb-10 flex items-center justify-center gap-3'>
+    <div id='theme' className='mb-10 flex items-center justify-center gap-3'>
       {themes.map(({ name }) => (
         <button
           type='button'
