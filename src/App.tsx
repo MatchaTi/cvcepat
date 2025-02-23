@@ -22,6 +22,7 @@ export default function App() {
         'bg-light-base text-light-content font-plus-jakarta-sans': theme === 'light',
         'bg-dark-base text-dark-content font-plus-jakarta-sans': theme === 'dark',
         'bg-elegant-base text-elegant-content font-spectral': theme === 'elegant',
+        'font-raleway bg-pastel-base text-pastel-content': theme === 'pastel',
       })}
     >
       <Navbar />

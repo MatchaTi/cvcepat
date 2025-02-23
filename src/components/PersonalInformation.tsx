@@ -19,11 +19,14 @@ export default function PersonalInformation() {
             type='text'
             className={clsx(
               'border p-3',
-              { 'font-inter border-retro-content/20 rounded-xl': theme === 'retro' },
-              { 'font-inter border-luxury-content/10 rounded-xl': theme === 'luxury' },
-              { 'font-inter border-light-content/10 rounded-xl': theme === 'light' },
-              { 'font-inter border-dark-content/10 rounded-xl': theme === 'dark' },
-              { 'font-lato border-elegant-content/10 rounded-xl': theme === 'elegant' },
+              {
+                'font-inter border-retro-content/20 rounded-xl': theme === 'retro',
+                'font-inter border-luxury-content/10 rounded-xl': theme === 'luxury',
+                'font-inter border-light-content/10 rounded-xl': theme === 'light',
+                'font-inter border-dark-content/10 rounded-xl': theme === 'dark',
+                'font-lato border-elegant-content/10 rounded-xl': theme === 'elegant',
+                'font-lato border-pastel-content/10 rounded-xl': theme === 'pastel',
+              },
               key === 'address' && 'col-span-2',
             )}
             value={data.personalInfo[key as keyof typeof data.personalInfo]}

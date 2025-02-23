@@ -20,6 +20,7 @@ export default function CVForm() {
         'bg-light-base text-light-content shadow-light-content/10 shadow': theme === 'light',
         'bg-dark-base text-dark-content shadow-dark-content/10 shadow': theme === 'dark',
         'bg-elegant-base text-elegant-content shadow-elegant-content/10 shadow': theme === 'elegant',
+        'bg-pastel-base text-pastel-content shadow-pastel-content/10 shadow': theme === 'pastel',
       })}
     >
       <section
@@ -29,6 +30,7 @@ export default function CVForm() {
           'border-light-content/10': theme === 'light',
           'border-dark-content/10': theme === 'dark',
           'border-elegant-content/10': theme === 'elegant',
+          'border-pastel-content/10': theme === 'pastel',
         })}
       >
         <div className='mb-2 flex items-center gap-1'>

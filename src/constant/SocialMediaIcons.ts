@@ -5,3 +5,11 @@ export const socialMediaIcons: string[] = [
   'mdi:linkedin',
   'prime:twitter',
 ];
+
+export const socialMediaIconsColor: string[] = [
+  'logos:facebook',
+  'bytesize:github',
+  'skill-icons:instagram',
+  'devicon:linkedin',
+  'prime:twitter',
+];

@@ -25,6 +25,7 @@ export default function Project() {
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
+                'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
               })}
               placeholder='Nama Project'
             />
@@ -35,6 +36,7 @@ export default function Project() {
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
+                'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
               })}
               value={description}
               onChange={(e) => updateProject(index, 'description', e.target.value)}
@@ -47,6 +49,7 @@ export default function Project() {
               'text-light-base rounded-xl': theme === 'light',
               'text-dark-base rounded-xl': theme === 'dark',
               'text-elegant-base rounded-xl': theme === 'elegant',
+              'text-pastel-base rounded-xl': theme === 'pastel',
             })}
             onClick={() => removeProject(index)}
           >
@@ -62,6 +65,7 @@ export default function Project() {
           'bg-light-content text-light-base rounded-xl p-3': theme === 'light',
           'bg-dark-content text-dark-base rounded-xl p-3': theme === 'dark',
           'bg-elegant-content text-elegant-base rounded-xl p-3': theme === 'elegant',
+          'bg-pastel-content text-pastel-base rounded-xl p-3': theme === 'pastel',
         })}
       >
         <Icon icon='ic:baseline-plus' />
