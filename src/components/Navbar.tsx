@@ -37,6 +37,7 @@ export default function Navbar() {
             'bg-dark-accent text-dark-content rounded-xl': theme === 'dark',
             'bg-elegant-accent text-elegant-content rounded-xl': theme === 'elegant',
             'bg-pastel-accent text-pastel-content rounded-xl': theme === 'pastel',
+            'bg-formal-accent text-formal-content rounded-xl': theme === 'formal',
           })}
         >
           <button
@@ -72,6 +73,7 @@ export default function Navbar() {
             'bg-dark-accent text-dark-content hover:bg-dark-darker rounded-xl': theme === 'dark',
             'bg-elegant-accent text-elegant-content hover:bg-elegant-darker rounded-xl': theme === 'elegant',
             'bg-pastel-accent text-pastel-content hover:bg-pastel-darker rounded-xl': theme === 'pastel',
+            'bg-formal-accent text-formal-content hover:bg-formal-darker rounded-xl': theme === 'formal',
           })}
         >
           <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
@@ -90,6 +92,7 @@ export default function Navbar() {
           'bg-dark-content text-dark-base rounded-xl': theme === 'dark',
           'bg-elegant-content text-elegant-base rounded-xl': theme === 'elegant',
           'bg-pastel-content text-pastel-base rounded-xl': theme === 'pastel',
+          'bg-formal-content text-formal-base rounded-xl': theme === 'formal',
         })}
       >
         <Icon icon='material-symbols:download' />

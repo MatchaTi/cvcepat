@@ -26,6 +26,7 @@ export default function Experience() {
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
                 'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               placeholder='Company'
             />
@@ -40,6 +41,7 @@ export default function Experience() {
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
                 'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               placeholder='Position'
             />
@@ -54,6 +56,7 @@ export default function Experience() {
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
                 'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               placeholder='Year'
             />
@@ -65,6 +68,7 @@ export default function Experience() {
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
                 'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               value={description}
               onChange={(e) => updateExperience(index, 'description', e.target.value)}
@@ -78,6 +82,7 @@ export default function Experience() {
               'text-dark-base rounded-xl': theme === 'dark',
               'text-elegant-base rounded-xl': theme === 'elegant',
               'text-pastel-base rounded-xl': theme === 'pastel',
+              'text-formal-base rounded-xl': theme === 'formal',
             })}
             onClick={() => removeExperience(index)}
           >
@@ -94,6 +99,7 @@ export default function Experience() {
           'bg-dark-content text-dark-base rounded-xl p-3': theme === 'dark',
           'bg-elegant-content text-elegant-base rounded-xl p-3': theme === 'elegant',
           'bg-pastel-content text-pastel-base rounded-xl p-3': theme === 'pastel',
+          'bg-formal-content text-formal-base rounded-xl p-3': theme === 'formal',
         })}
       >
         <Icon icon='ic:baseline-plus' />

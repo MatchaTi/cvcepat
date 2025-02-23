@@ -20,6 +20,7 @@ export default function ThemeSwitcher() {
             'bg-dark-accent text-dark-content hover:bg-dark-darker rounded-xl': theme === 'dark',
             'bg-elegant-accent text-elegant-content hover:bg-elegant-darker rounded-xl': theme === 'elegant',
             'bg-pastel-accent text-pastel-content hover:bg-pastel-darker rounded-xl': theme === 'pastel',
+            'bg-formal-accent text-formal-content hover:bg-formal-darker rounded-xl': theme === 'formal',
           })}
         >
           <Icon icon={theme == name ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
