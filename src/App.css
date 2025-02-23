@@ -75,13 +75,23 @@
 
 @media print {
   @page {
-    size: A4 portrait;
+    /* size: A4 portrait; */
+    width: 210mm;
     margin: 0;
   }
 
   body {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #resumeResult,
+  #resumeResult * {
+    visibility: visible;
   }
 
   #resumeResult {
