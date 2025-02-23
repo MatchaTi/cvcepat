@@ -47,16 +47,16 @@ export default function Elegant() {
               <div className='font-spectral text-elegant-content-darker col-span-3 text-xl font-bold italic'>
                 {position}
               </div>
-              <div className='flex items-center gap-1 text-xs font-light'>
+              <div className='font-lato flex items-center gap-1 text-xs font-light'>
                 <Icon icon='streamline:baggage' />
                 <span className='mt-1'>{company}</span>
               </div>
-              <div className='flex items-center justify-end gap-1 text-xs font-light'>
+              <div className='font-lato flex items-center justify-end gap-1 text-xs font-light'>
                 <Icon icon='clarity:calendar-line' />
                 <span className='mt-0.5'>{year}</span>
               </div>
             </div>
-            <div className='leading-tight'>{description}</div>
+            <div className='font-lato leading-tight font-light'>{description}</div>
           </div>
         ))}
       </section>
@@ -80,12 +80,12 @@ export default function Elegant() {
                 <div className='font-spectral text-elegant-content-darker mb-3 text-xl font-bold italic'>
                   {institute}
                 </div>
-                <div className='space-y-2 leading-tight font-light'>
+                <div className='font-lato space-y-2 leading-tight font-light'>
                   <div className='flex items-center gap-1'>
                     <Icon icon='ion:book-outline' />
                     <span>{degree}</span>
                   </div>
-                  <div className='flex items-center gap-1 text-xs'>
+                  <div className='font-lato flex items-center gap-1 text-xs'>
                     <Icon icon='clarity:calendar-line' />
                     <span className='mt-0.5'>{year}</span>
                   </div>

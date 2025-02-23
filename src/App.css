@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
 * {
@@ -18,12 +19,18 @@
   --font-inconsolata: 'Inconsolata', monospace;
   --font-spectral: 'Spectral', serif;
   --font-lato: 'Lato', sans-serif;
+  --font-raleway: 'Raleway', sans-serif;
 
   /* colors */
   /* primary colors */
   --color-dark-blue: #187aba;
   --color-red-custom: #f35248;
   --color-salmon-custom: #db9291;
+  --color-dark-aqua: #277b71;
+  --color-dark-purple: #854da0;
+  --color-dark-cyan: #007d91;
+  --color-dark-red: #c53d40;
+  --color-dark-green: #128035;
 
   /* retro theme */
   --color-retro-base: #ece3ca;
@@ -57,6 +64,13 @@
   --color-elegant-darker: #f0f1f1;
   --color-elegant-content: #242424;
   --color-elegant-content-darker: #2d3e5b;
+
+  /* pastel theme */
+  --color-pastel-base: #ffffff;
+  --color-pastel-accent: #f1f5f9;
+  --color-pastel-darker: #e2e8f0;
+  --color-pastel-content: #64748b;
+  --color-pastel-content-darker: #334155;
 }
 
 @media print {
