@@ -41,6 +41,7 @@ export default function Navbar() {
           })}
         >
           <button
+            id='editor'
             type='button'
             onClick={() => setStatus('editor')}
             className={clsx(
@@ -52,6 +53,7 @@ export default function Navbar() {
             <span>Editor</span>
           </button>
           <button
+            id='preview'
             type='button'
             onClick={() => setStatus('preview')}
             className={clsx(
@@ -64,6 +66,7 @@ export default function Navbar() {
           </button>
         </div>
         <button
+          id='dummy'
           type='button'
           onClick={setDummy}
           className={clsx('flex cursor-pointer items-center gap-1 p-3 active:scale-95', {
@@ -82,6 +85,7 @@ export default function Navbar() {
       </div>
 
       <button
+        id='pdf'
         type='button'
         onClick={exportPDF}
         disabled={status === 'editor'}
