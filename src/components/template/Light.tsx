@@ -9,9 +9,9 @@ export default function Light() {
   return (
     <main className='bg-light-base shadow-light-content/10 mx-auto h-[297mm] min-h-fit w-[210mm] bg-[url(/light-bg.png)] bg-contain bg-no-repeat px-16 shadow'>
       <section className='w-full pt-12 text-center'>
-        <h2 className='text-light-content-darker mb-1 text-3xl font-bold'>{data.personalInfo.fullName}</h2>
+        <h2 className='text-light-content-darker mb-1 text-5xl font-bold text-balance'>{data.personalInfo.fullName}</h2>
         <h3 className='mb-5 text-xs'>{data.personalInfo.designation}</h3>
-        <div className='text-light-content-darker flex items-center justify-center gap-2 text-[9px]'>
+        <div className='text-light-content-darker flex items-center justify-center gap-2 text-xs'>
           <div className='flex items-center gap-[2px]'>
             <Icon icon='mdi:location' />
             <span>{data.personalInfo.address}</span>
@@ -21,7 +21,7 @@ export default function Light() {
             <span>{data.personalInfo.email}</span>
           </div>
         </div>
-        <div className='mt-4 flex items-center justify-center gap-1 text-[8px]'>
+        <div className='mt-4 flex items-center justify-center gap-1 text-xs'>
           {Object.entries(data.socialLinks).map((key, index) => (
             <div
               key={index}
@@ -40,11 +40,11 @@ export default function Light() {
         </div>
       </section>
 
-      <section className='border-light-content/10 mt-20 grid grid-cols-4 gap-5 border-b text-[9px]'>
+      <section className='border-light-content/10 mt-20 grid grid-cols-4 gap-5 border-b'>
         <div className='font-bold'>Education</div>
         <div className='col-span-3'>
           {data.education.map(({ institute, degree, year }, index) => (
-            <div key={index} className='mb-3 flex items-center justify-between'>
+            <div key={index} className='mb-3 space-y-2'>
               <div>
                 <span className='font-bold'>{institute}</span> — <span>{degree}</span>
               </div>
@@ -57,27 +57,25 @@ export default function Light() {
         </div>
       </section>
 
-      <section className='border-light-content/10 mt-4 grid grid-cols-4 gap-5 border-b text-[9px]'>
+      <section className='border-light-content/10 mt-4 grid grid-cols-4 gap-5 border-b'>
         <div className='font-bold'>Experience</div>
         <div className='col-span-3'>
           {data.experience.map(({ company, position, year, description }, index) => (
-            <div key={index} className='mb-5'>
-              <div className='mb-2 flex items-center justify-between'>
-                <div>
-                  <span className='font-bold'>{company}</span> — <span>{position}</span>
-                </div>
-                <div className='font-inconsolata flex items-center gap-1 text-xs'>
-                  <Icon icon='famicons:calendar-outline' />
-                  <span>{year}</span>
-                </div>
+            <div key={index} className='mb-5 space-y-2'>
+              <div>
+                <span className='font-bold'>{company}</span> — <span>{position}</span>
               </div>
-              <div>{description}</div>
+              <div className='font-inconsolata flex items-center gap-1 text-sm'>
+                <Icon icon='famicons:calendar-outline' />
+                <span>{year}</span>
+              </div>
+              <div className='text-sm'>{description}</div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className='border-light-content/10 mt-4 grid grid-cols-4 gap-5 border-b text-[9px]'>
+      <section className='border-light-content/10 mt-4 grid grid-cols-4 gap-5 border-b'>
         <div className='font-bold'>Projects & Awards</div>
         <div className='col-span-3'>
           {data.projects.map(({ projectName, description }, index) => (
@@ -85,13 +83,13 @@ export default function Light() {
               <div className='mb-2'>
                 <span className='font-bold'>{projectName}</span>
               </div>
-              <div>{description}</div>
+              <div className='text-sm'>{description}</div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className='border-light-content/10 mt-4 grid grid-cols-4 gap-5 border-b text-[9px]'>
+      <section className='border-light-content/10 mt-4 grid grid-cols-4 gap-5 border-b'>
         <div className='font-bold'>Skills & Tools</div>
         <div className='col-span-3 flex items-center gap-3'>
           {data.skills.map((skill, index) => (
