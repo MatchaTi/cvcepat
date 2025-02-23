@@ -24,6 +24,7 @@ export default function Education() {
               'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
               'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
               'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+              'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
             })}
             onChange={(e) => updateEducation(index, 'institute', e.target.value)}
             placeholder='School'
@@ -37,7 +38,7 @@ export default function Education() {
               'border-light-content/10 font-inter rounded-xl': theme === 'light',
               'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
               'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
-              'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+              'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
             })}
             onChange={(e) => updateEducation(index, 'degree', e.target.value)}
             placeholder='Degree'
@@ -52,7 +53,7 @@ export default function Education() {
               'border-light-content/10 font-inter rounded-xl': theme === 'light',
               'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
               'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
-              'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+              'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
             })}
             placeholder='Year'
           />
@@ -63,6 +64,7 @@ export default function Education() {
               'text-dark-base rounded-xl': theme === 'dark',
               'text-elegant-base rounded-xl': theme === 'elegant',
               'text-pastel-base rounded-xl': theme === 'pastel',
+              'text-formal-base rounded-xl': theme === 'formal',
             })}
             onClick={() => removeEducation(index)}
           >
@@ -79,6 +81,7 @@ export default function Education() {
           'bg-dark-content text-dark-base rounded-xl p-3': theme === 'dark',
           'bg-elegant-content text-elegant-base rounded-xl p-3': theme === 'elegant',
           'bg-pastel-content text-pastel-base rounded-xl p-3': theme === 'pastel',
+          'bg-formal-content text-formal-base rounded-xl p-3': theme === 'formal',
         })}
       >
         <Icon icon='ic:baseline-plus' />

@@ -23,6 +23,7 @@ export default function Skill() {
               'border-dark-content/10 font-inter rounded-xl border': theme === 'dark',
               'border-elegant-content/10 font-lato rounded-xl border': theme === 'elegant',
               'border-pastel-content/10 font-lato rounded-xl border': theme === 'pastel',
+              'border-formal-content/10 font-source-serif rounded-xl border': theme === 'formal',
             })}
           >
             <input
@@ -39,6 +40,7 @@ export default function Skill() {
                 'text-dark-base rounded-xl': theme === 'dark',
                 'text-elegant-base rounded-xl': theme === 'elegant',
                 'text-pastel-base rounded-xl': theme === 'pastel',
+                'text-formal-base rounded-xl': theme === 'formal',
               })}
               onClick={() => removeSkill(index)}
             >
@@ -55,6 +57,7 @@ export default function Skill() {
             'bg-dark-content text-dark-base rounded-xl p-3': theme === 'dark',
             'bg-elegant-content text-elegant-base rounded-xl p-3': theme === 'elegant',
             'bg-pastel-content text-pastel-base rounded-xl p-3': theme === 'pastel',
+            'bg-formal-content text-formal-base rounded-xl p-3': theme === 'formal',
           })}
         >
           <Icon icon='ic:baseline-plus' />

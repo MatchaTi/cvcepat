@@ -21,16 +21,18 @@ export default function CVForm() {
         'bg-dark-base text-dark-content shadow-dark-content/10 shadow': theme === 'dark',
         'bg-elegant-base text-elegant-content shadow-elegant-content/10 shadow': theme === 'elegant',
         'bg-pastel-base text-pastel-content shadow-pastel-content/10 shadow': theme === 'pastel',
+        'bg-formal-base text-formal-content shadow-formal-content/10 shadow': theme === 'formal',
       })}
     >
       <section
-        className={clsx('rounded-xl border p-3', {
-          'border-retro-content/20': theme === 'retro',
-          'border-luxury-content/10': theme === 'luxury',
-          'border-light-content/10': theme === 'light',
-          'border-dark-content/10': theme === 'dark',
-          'border-elegant-content/10': theme === 'elegant',
-          'border-pastel-content/10': theme === 'pastel',
+        className={clsx('border p-3', {
+          'border-retro-content/20 rounded-xl': theme === 'retro',
+          'border-luxury-content/10 rounded-xl': theme === 'luxury',
+          'border-light-content/10 rounded-xl': theme === 'light',
+          'border-dark-content/10 rounded-xl': theme === 'dark',
+          'border-elegant-content/10 rounded-xl': theme === 'elegant',
+          'border-pastel-content/10 rounded-xl': theme === 'pastel',
+          'border-formal-content/10 rounded-xl': theme === 'formal',
         })}
       >
         <div className='mb-2 flex items-center gap-1'>

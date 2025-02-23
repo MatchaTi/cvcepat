@@ -25,7 +25,8 @@ export default function PersonalInformation() {
                 'font-inter border-light-content/10 rounded-xl': theme === 'light',
                 'font-inter border-dark-content/10 rounded-xl': theme === 'dark',
                 'font-lato border-elegant-content/10 rounded-xl': theme === 'elegant',
-                'font-lato border-pastel-content/10 rounded-xl': theme === 'pastel',
+                'font-raleway border-pastel-content/10 rounded-xl': theme === 'pastel',
+                'font-source-serif border-formal-content/10 rounded-xl': theme === 'formal',
               },
               key === 'address' && 'col-span-2',
             )}
