@@ -22,7 +22,7 @@ export default function Skill() {
               'border-light-content/10 font-inter rounded-xl border': theme === 'light',
               'border-dark-content/10 font-inter rounded-xl border': theme === 'dark',
               'border-elegant-content/10 font-lato rounded-xl border': theme === 'elegant',
-              'border-pastel-content/10 font-lato rounded-xl border': theme === 'pastel',
+              'border-pastel-content/10 font-raleway rounded-xl border': theme === 'pastel',
               'border-formal-content/10 font-source-serif rounded-xl border': theme === 'formal',
             })}
           >
