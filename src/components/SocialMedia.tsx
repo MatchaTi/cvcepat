@@ -25,7 +25,7 @@ export default function SocialMedia() {
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
-                'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-pastel-content/10 font-raleway rounded-xl': theme === 'pastel',
                 'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               },
               key === 'twitter' && 'col-span-2',

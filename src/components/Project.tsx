@@ -25,7 +25,7 @@ export default function Project() {
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
-                'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-pastel-content/10 font-raleway rounded-xl': theme === 'pastel',
                 'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               placeholder='Nama Project'
@@ -37,7 +37,7 @@ export default function Project() {
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
-                'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-pastel-content/10 font-raleway rounded-xl': theme === 'pastel',
                 'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               value={description}

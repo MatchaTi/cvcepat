@@ -25,7 +25,7 @@ export default function Experience() {
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
-                'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-pastel-content/10 font-raleway rounded-xl': theme === 'pastel',
                 'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               placeholder='Company'
@@ -40,7 +40,7 @@ export default function Experience() {
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
-                'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-pastel-content/10 font-raleway rounded-xl': theme === 'pastel',
                 'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               placeholder='Position'
@@ -55,7 +55,7 @@ export default function Experience() {
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
-                'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-pastel-content/10 font-raleway rounded-xl': theme === 'pastel',
                 'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               placeholder='Year'
@@ -67,7 +67,7 @@ export default function Experience() {
                 'border-light-content/10 font-inter rounded-xl': theme === 'light',
                 'border-dark-content/10 font-inter rounded-xl': theme === 'dark',
                 'border-elegant-content/10 font-lato rounded-xl': theme === 'elegant',
-                'border-pastel-content/10 font-lato rounded-xl': theme === 'pastel',
+                'border-pastel-content/10 font-raleway rounded-xl': theme === 'pastel',
                 'border-formal-content/10 font-source-serif rounded-xl': theme === 'formal',
               })}
               value={description}
