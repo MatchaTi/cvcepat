@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { useCVStore } from '../../store/useCVStore';
 
 export default function Formal() {
@@ -5,16 +6,25 @@ export default function Formal() {
 
   return (
     <main className='bg-formal-base shadow-formal-content/10 mx-auto h-[297mm] min-h-fit w-[210mm] space-y-[18px] p-10 text-sm shadow'>
-      <section className='border-b'>
-        <h2 className='mx-auto max-w-96 text-center text-3xl font-bold text-balance uppercase'>
-          {data.personalInfo.fullName}
-        </h2>
-        <div className='flex items-center justify-center gap-3'>
-          <div>{data.personalInfo.address}</div>
-          <div className='h-1 w-1 rounded-full bg-black'></div>
-          <div>{data.personalInfo.email}</div>
-          <div className='h-1 w-1 rounded-full bg-black'></div>
-          <div>{data.personalInfo.phone}</div>
+      <section className='flex items-center gap-4 border-b pb-4'>
+        {data.photo ? (
+          <div className='h-16 w-16 overflow-hidden'>
+            <img src={data.photo} alt='avatar' className='h-full w-full object-cover' />
+          </div>
+        ) : null}
+
+        <div className={clsx({ 'text center flex w-full flex-col items-center': !data.photo })}>
+          <h2 className='max-w96 mxauto textcenter text-3xl font-bold text-balance uppercase'>
+            {data.personalInfo.fullName}
+          </h2>
+
+          <div className='flex items-center justify-center gap-3'>
+            <div>{data.personalInfo.address}</div>
+            <div className='h-1 w-1 rounded-full bg-black'></div>
+            <div>{data.personalInfo.email}</div>
+            <div className='h-1 w-1 rounded-full bg-black'></div>
+            <div>{data.personalInfo.phone}</div>
+          </div>
         </div>
       </section>
 

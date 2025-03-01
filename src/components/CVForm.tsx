@@ -5,6 +5,7 @@ import Bio from './Bio';
 import Education from './Education';
 import Experience from './Experience';
 import PersonalInformation from './PersonalInformation';
+import Photo from './Photo';
 import Project from './Project';
 import Skill from './Skill';
 import SocialMedia from './SocialMedia';
@@ -51,6 +52,7 @@ export default function CVForm() {
       </section>
 
       <PersonalInformation />
+      <Photo />
       <Bio />
       <Education />
       <Experience />
