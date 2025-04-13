@@ -54,7 +54,7 @@ export default function Experience() {
       <div className='flex justify-center items-center'>
         <button onClick={addExperience} className='btn btn-wide'>
           <Icon icon='ic:baseline-plus' />
-          <span>Tambah</span>
+          <span>Tambah Pengalaman</span>
         </button>
       </div>
     </section>
