@@ -1,18 +1,39 @@
-import Dark from '../components/template/Dark';
-import Elegant from '../components/template/Elegant';
-import Formal from '../components/template/Formal';
-import Light from '../components/template/Light';
-import Luxury from '../components/template/Luxury';
-import Pastel from '../components/template/Pastel';
-import Retro from '../components/template/Retro';
 import { Theme } from '../type/theme';
 
-export const themes: { name: Theme; component: React.FC }[] = [
-  { name: 'formal', component: Formal },
-  { name: 'light', component: Light },
-  { name: 'dark', component: Dark },
-  { name: 'retro', component: Retro },
-  { name: 'luxury', component: Luxury },
-  { name: 'pastel', component: Pastel },
-  { name: 'elegant', component: Elegant },
+export const themes: { name: Theme }[] = [
+  { name: 'light' },
+  { name: 'dark' },
+  { name: 'cupcake' },
+  { name: 'bumblebee' },
+  { name: 'emerald' },
+  { name: 'corporate' },
+  { name: 'synthwave' },
+  { name: 'retro' },
+  { name: 'cyberpunk' },
+  { name: 'valentine' },
+  { name: 'halloween' },
+  { name: 'garden' },
+  { name: 'forest' },
+  { name: 'aqua' },
+  { name: 'lofi' },
+  { name: 'pastel' },
+  { name: 'fantasy' },
+  { name: 'wireframe' },
+  { name: 'black' },
+  { name: 'luxury' },
+  { name: 'dracula' },
+  { name: 'cmyk' },
+  { name: 'autumn' },
+  { name: 'business' },
+  { name: 'acid' },
+  { name: 'lemonade' },
+  { name: 'night' },
+  { name: 'coffee' },
+  { name: 'winter' },
+  { name: 'dim' },
+  { name: 'nord' },
+  { name: 'sunset' },
+  { name: 'caramellatte' },
+  { name: 'abyss' },
+  { name: 'silk' },
 ];

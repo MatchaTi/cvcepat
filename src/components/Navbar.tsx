@@ -1,107 +1,96 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import clsx from 'clsx';
 import { useCVStore } from '../store/useCVStore';
-import { useThemeStore } from '../store/useThemeStore';
-import { useWorkspaceStore } from '../store/useWorkspaceStore';
 import { exportPDF } from '../util/PDF';
+import { Link, useLocation } from 'react-router';
+import { useFirstTimeStore } from '../store/firstTimeStore';
+import { driverObj } from '../util/tutorial';
+import clsx from 'clsx';
 
 export default function Navbar() {
-  const { theme } = useThemeStore();
   const { isDummyData, toggleDummy, setDummyData, clearData } = useCVStore();
-  const { status, setStatus } = useWorkspaceStore();
+  const { isNotFirstTime, setIsNotFirstTime } = useFirstTimeStore();
+  const location = useLocation();
+
+  if (!isNotFirstTime) {
+    driverObj.drive();
+    setIsNotFirstTime();
+  }
 
   const setDummy = () => {
     toggleDummy();
     if (!isDummyData) {
       setDummyData();
-      setStatus('preview');
     } else {
       clearData();
-      setStatus('editor');
     }
   };
 
   return (
-    <nav className='flex items-center justify-between p-6'>
-      <div className='flex items-center gap-1'>
-        <Icon icon='mynaui:lightning-solid' className='text-dark-blue' />
-        <span className='text-2xl font-bold'>CVCepat</span>
-      </div>
-
-      <div className='flex items-center gap-3'>
-        <div
-          className={clsx('flex items-center gap-3 p-3', {
-            'bg-retro-accent text-retro-content rounded-xl': theme === 'retro',
-            'bg-luxury-accent text-luxury-content rounded-xl': theme === 'luxury',
-            'bg-light-accent text-light-content rounded-xl': theme === 'light',
-            'bg-dark-accent text-dark-content rounded-xl': theme === 'dark',
-            'bg-elegant-accent text-elegant-content rounded-xl': theme === 'elegant',
-            'bg-pastel-accent text-pastel-content rounded-xl': theme === 'pastel',
-            'bg-formal-accent text-formal-content rounded-xl': theme === 'formal',
-          })}
-        >
-          <button
-            id='editor'
-            type='button'
-            onClick={() => setStatus('editor')}
-            className={clsx(
-              'flex cursor-pointer items-center gap-1 border-b',
-              status === 'editor' ? 'border-current' : 'border-transparent',
-            )}
-          >
-            <Icon icon='lucide:edit' />
-            <span>Editor</span>
-          </button>
-          <button
-            id='preview'
-            type='button'
-            onClick={() => setStatus('preview')}
-            className={clsx(
-              'flex cursor-pointer items-center gap-1 border-b',
-              status === 'preview' ? 'border-current' : 'border-transparent',
-            )}
-          >
-            <Icon icon='mingcute:grid-line' />
-            <span>Preview</span>
-          </button>
+    <>
+      <div className='p-0 navbar bg-base-100'>
+        <div className='navbar-start'>
+          <div className='dropdown'>
+            <div tabIndex={0} role='button' className='p-0 mr-2 lg:hidden btn btn-ghost'>
+              <Icon icon='mynaui:chart-bar-one-solid' className='text-xl rotate-90' />
+            </div>
+            <ul
+              tabIndex={0}
+              className='p-2 mt-3 space-y-2 w-52 shadow menu menu-sm dropdown-content bg-base-100 rounded-box z-1'
+            >
+              <li>
+                <Link to={'/form'}>Form</Link>
+              </li>
+              <li>
+                <Link to={'/result'}>Hasil</Link>
+              </li>
+              <li>
+                <Link to={'/panduan'}>Panduan</Link>
+              </li>
+              <li>
+                <button type='button' onClick={setDummy} className='btn'>
+                  <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
+                  <span>Contoh</span>
+                </button>
+              </li>
+              <li>
+                <button type='button' onClick={exportPDF} className='btn'>
+                  <Icon icon='material-symbols:download' />
+                  <span>Ekspor ke PDF</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <Link id='home' to={'/'} className='flex gap-1 items-center'>
+            <Icon icon='mynaui:lightning-solid' className='text-dark-blue' />
+            <span className='text-2xl font-bold'>CVCepat</span>
+          </Link>
         </div>
-        <button
-          id='dummy'
-          type='button'
-          onClick={setDummy}
-          className={clsx('flex cursor-pointer items-center gap-1 p-3 active:scale-95', {
-            'bg-retro-accent text-retro-content hover:bg-retro-darker rounded-xl': theme === 'retro',
-            'bg-luxury-accent text-luxury-content hover:bg-luxury-darker rounded-xl': theme === 'luxury',
-            'bg-light-accent text-light-content hover:bg-light-darker rounded-xl': theme === 'light',
-            'bg-dark-accent text-dark-content hover:bg-dark-darker rounded-xl': theme === 'dark',
-            'bg-elegant-accent text-elegant-content hover:bg-elegant-darker rounded-xl': theme === 'elegant',
-            'bg-pastel-accent text-pastel-content hover:bg-pastel-darker rounded-xl': theme === 'pastel',
-            'bg-formal-accent text-formal-content hover:bg-formal-darker rounded-xl': theme === 'formal',
-          })}
-        >
-          <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
-          <span>Contoh</span>
-        </button>
+        <div className='hidden lg:flex navbar-center'>
+          <ul className='menu menu-horizontal'>
+            <li id='form' className={clsx('opacity-50', location.pathname === '/form' && 'opacity-100')}>
+              <Link to={'/form'}>Form</Link>
+            </li>
+            <li id='hasil' className={clsx('opacity-50', location.pathname === '/result' && 'opacity-100')}>
+              <Link to={'/result'}>Hasil</Link>
+            </li>
+            <li id='panduan' className={clsx('opacity-50', location.pathname === '/panduan' && 'opacity-100')}>
+              <Link to={'/panduan'}>Panduan</Link>
+            </li>
+          </ul>
+        </div>
+        <div className='hidden md:flex navbar-end'>
+          <div className='flex gap-3 items-center'>
+            <button id='dummy' type='button' onClick={setDummy} className='btn'>
+              <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
+              <span>Contoh</span>
+            </button>
+            <button id='pdf' type='button' onClick={exportPDF} className='btn'>
+              <Icon icon='material-symbols:download' />
+              <span>Ekspor ke PDF</span>
+            </button>
+          </div>
+        </div>
       </div>
-
-      <button
-        id='pdf'
-        type='button'
-        onClick={exportPDF}
-        disabled={status === 'editor'}
-        className={clsx('flex cursor-pointer items-center gap-1 p-3 active:scale-95', {
-          'bg-retro-content text-retro-base rounded-xl': theme === 'retro',
-          'bg-luxury-content text-luxury-base rounded-xl': theme === 'luxury',
-          'bg-light-content text-light-base rounded-xl': theme === 'light',
-          'bg-dark-content text-dark-base rounded-xl': theme === 'dark',
-          'bg-elegant-content text-elegant-base rounded-xl': theme === 'elegant',
-          'bg-pastel-content text-pastel-base rounded-xl': theme === 'pastel',
-          'bg-formal-content text-formal-base rounded-xl': theme === 'formal',
-        })}
-      >
-        <Icon icon='material-symbols:download' />
-        <span>Ekspor ke PDF</span>
-      </button>
-    </nav>
+    </>
   );
 }
