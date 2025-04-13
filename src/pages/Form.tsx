@@ -1,5 +1,4 @@
 import MainLayout from '../components/MainLayout';
-import 'driver.js/dist/driver.css';
 import { useCVStore } from '../store/useCVStore';
 import { useEffect } from 'react';
 import CVForm from '../components/CVForm';
