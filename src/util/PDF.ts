@@ -1,7 +1,4 @@
 export const exportPDF = () => {
-  // if ('ontouchstart' in document.documentElement) {
-  // alert('WIP!');
-  // } else {
   const element = document.getElementById('resumeResult');
   const stylesheet = document.styleSheets[0];
 
@@ -11,5 +8,4 @@ export const exportPDF = () => {
   );
 
   window.print();
-  // }
 };
