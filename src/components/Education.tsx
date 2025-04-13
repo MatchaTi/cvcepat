@@ -42,7 +42,7 @@ export default function Education() {
       <div className='flex justify-center items-center'>
         <button onClick={addEducation} className='btn btn-wide'>
           <Icon icon='ic:baseline-plus' />
-          <span>Tambah</span>
+          <span>Tambah Pendidikan</span>
         </button>
       </div>
     </section>

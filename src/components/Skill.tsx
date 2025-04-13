@@ -24,7 +24,7 @@ export default function Skill() {
         ))}
         <button onClick={addSkill} className='btn'>
           <Icon icon='ic:baseline-plus' />
-          <span>Tambah</span>
+          <span>Tambah Kemampuan</span>
         </button>
       </div>
     </section>

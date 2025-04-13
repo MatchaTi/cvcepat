@@ -35,7 +35,7 @@ export default function Project() {
       <div className='flex items-center'>
         <button onClick={addProject} className='mx-auto btn btn-wide'>
           <Icon icon='ic:baseline-plus' />
-          <span>Tambah</span>
+          <span>Tambah Proyek</span>
         </button>
       </div>
     </section>
