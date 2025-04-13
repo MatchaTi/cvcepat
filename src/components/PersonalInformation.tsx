@@ -1,42 +1,28 @@
-import clsx from 'clsx';
+import { personalInfoIcons } from '../constant/icons';
 import { personalPlaceholders } from '../constant/placeholders';
 import { useCVStore } from '../store/useCVStore';
-import { useThemeStore } from '../store/useThemeStore';
+import Input from './Input';
 
 export default function PersonalInformation() {
-  const { theme } = useThemeStore();
   const { data, setData } = useCVStore();
 
   return (
     <section>
-      <h2 className={clsx('mb-3 text-xl font-bold', { uppercase: theme === 'retro' || theme === 'luxury' })}>
-        Informasi Personal
-      </h2>
-      <div className='grid grid-cols-2 gap-3'>
+      <h2>Informasi Personal</h2>
+      <div className='grid gap-3 md:grid-cols-2'>
         {Object.keys(data.personalInfo).map((key, index) => (
-          <input
+          <Input
             key={key}
             type='text'
-            className={clsx(
-              'border p-3',
-              {
-                'font-inter border-retro-content/20 rounded-xl': theme === 'retro',
-                'font-inter border-luxury-content/10 rounded-xl': theme === 'luxury',
-                'font-inter border-light-content/10 rounded-xl': theme === 'light',
-                'font-inter border-dark-content/10 rounded-xl': theme === 'dark',
-                'font-lato border-elegant-content/10 rounded-xl': theme === 'elegant',
-                'font-raleway border-pastel-content/10 rounded-xl': theme === 'pastel',
-                'font-source-serif border-formal-content/10 rounded-xl': theme === 'formal',
-              },
-              key === 'address' && 'col-span-2',
-            )}
+            label={key.charAt(0).toUpperCase() + key.slice(1)}
+            icon={personalInfoIcons[index]}
+            placeholder={personalPlaceholders[index]}
             value={data.personalInfo[key as keyof typeof data.personalInfo]}
             onChange={(e) =>
               setData({
                 personalInfo: { ...data.personalInfo, [key]: e.target.value },
               })
             }
-            placeholder={personalPlaceholders[index]}
           />
         ))}
       </div>
