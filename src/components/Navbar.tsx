@@ -67,13 +67,13 @@ export default function Navbar() {
         </div>
         <div className='hidden lg:flex navbar-center'>
           <ul className='menu menu-horizontal'>
-            <li id='form' className={clsx('btn btn-ghost p-1', location.pathname === '/form' && 'btn-soft')}>
+            <li id='form' className={clsx('opacity-50', location.pathname === '/form' && 'opacity-100')}>
               <Link to={'/form'}>Form</Link>
             </li>
-            <li id='hasil' className={clsx('btn btn-ghost p-1', location.pathname === '/result' && 'btn-soft')}>
+            <li id='hasil' className={clsx('opacity-50', location.pathname === '/result' && 'opacity-100')}>
               <Link to={'/result'}>Hasil</Link>
             </li>
-            <li id='panduan' className={clsx('btn btn-ghost p-1', location.pathname === '/panduan' && 'btn-soft')}>
+            <li id='panduan' className={clsx('opacity-50', location.pathname === '/panduan' && 'opacity-100')}>
               <Link to={'/panduan'}>Panduan</Link>
             </li>
           </ul>
