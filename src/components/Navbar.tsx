@@ -26,81 +26,79 @@ export default function Navbar() {
   };
 
   return (
-    <>
-      <div className='p-0 navbar bg-base-100'>
-        <div className='navbar-start'>
-          <div className='dropdown'>
-            <div tabIndex={0} role='button' className='p-0 mr-2 lg:hidden btn btn-ghost'>
-              <Icon icon='mynaui:chart-bar-one-solid' className='text-xl rotate-90' />
-            </div>
-            <ul
-              tabIndex={0}
-              className='p-2 mt-3 space-y-2 w-52 shadow menu menu-sm dropdown-content bg-base-100 rounded-box z-1'
-            >
-              <li>
-                <Link to={'/form'}>Form</Link>
-              </li>
-              <li>
-                <Link to={'/result'}>Hasil</Link>
-              </li>
-              <li>
-                <Link to={'/panduan'}>Panduan</Link>
-              </li>
-              <li>
-                <a href={'https://github.com/MatchaTi/cvcepat'} target='_blank'>
-                  Github
-                </a>
-              </li>
-              <li>
-                <button type='button' onClick={setDummy} className='btn'>
-                  <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
-                  <span>Contoh</span>
-                </button>
-              </li>
-              <li>
-                <button type='button' onClick={exportPDF} className='btn'>
-                  <Icon icon='material-symbols:download' />
-                  <span>Ekspor ke PDF</span>
-                </button>
-              </li>
-            </ul>
+    <div className='sticky top-0 z-50 p-0 navbar bg-base-100'>
+      <div className='navbar-start'>
+        <div className='dropdown'>
+          <div tabIndex={0} role='button' className='p-0 mr-2 lg:hidden btn btn-ghost'>
+            <Icon icon='mynaui:chart-bar-one-solid' className='text-xl rotate-90' />
           </div>
-          <Link id='home' to={'/'} className='flex gap-1 items-center'>
-            <Icon icon='mynaui:lightning-solid' className='text-dark-blue' />
-            <span className='text-2xl font-bold'>CVCepat</span>
-          </Link>
-        </div>
-        <div className='hidden lg:flex navbar-center'>
-          <ul className='menu menu-horizontal'>
-            <li id='form' className={clsx('opacity-50', location.pathname === '/form' && 'opacity-100')}>
+          <ul
+            tabIndex={0}
+            className='p-2 mt-3 space-y-2 w-52 shadow menu menu-sm dropdown-content bg-base-100 rounded-box z-1'
+          >
+            <li>
               <Link to={'/form'}>Form</Link>
             </li>
-            <li id='hasil' className={clsx('opacity-50', location.pathname === '/result' && 'opacity-100')}>
+            <li>
               <Link to={'/result'}>Hasil</Link>
             </li>
-            <li id='panduan' className={clsx('opacity-50', location.pathname === '/panduan' && 'opacity-100')}>
+            <li>
               <Link to={'/panduan'}>Panduan</Link>
             </li>
-            <li className='opacity-50'>
+            <li>
               <a href={'https://github.com/MatchaTi/cvcepat'} target='_blank'>
                 Github
               </a>
             </li>
+            <li>
+              <button type='button' onClick={setDummy} className='btn'>
+                <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
+                <span>Contoh</span>
+              </button>
+            </li>
+            <li>
+              <button type='button' onClick={exportPDF} className='btn'>
+                <Icon icon='material-symbols:download' />
+                <span>Ekspor ke PDF</span>
+              </button>
+            </li>
           </ul>
         </div>
-        <div className='hidden md:flex navbar-end'>
-          <div className='flex gap-3 items-center'>
-            <button id='dummy' type='button' onClick={setDummy} className='btn'>
-              <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
-              <span>Contoh</span>
-            </button>
-            <button id='pdf' type='button' onClick={exportPDF} className='btn'>
-              <Icon icon='material-symbols:download' />
-              <span>Ekspor ke PDF</span>
-            </button>
-          </div>
+        <Link id='home' to={'/'} className='flex gap-1 items-center'>
+          <Icon icon='mynaui:lightning-solid' className='text-dark-blue' />
+          <span className='text-2xl font-bold'>CVCepat</span>
+        </Link>
+      </div>
+      <div className='hidden lg:flex navbar-center'>
+        <ul className='menu menu-horizontal'>
+          <li id='form' className={clsx('opacity-50', location.pathname === '/form' && 'opacity-100')}>
+            <Link to={'/form'}>Form</Link>
+          </li>
+          <li id='hasil' className={clsx('opacity-50', location.pathname === '/result' && 'opacity-100')}>
+            <Link to={'/result'}>Hasil</Link>
+          </li>
+          <li id='panduan' className={clsx('opacity-50', location.pathname === '/panduan' && 'opacity-100')}>
+            <Link to={'/panduan'}>Panduan</Link>
+          </li>
+          <li className='opacity-50'>
+            <a href={'https://github.com/MatchaTi/cvcepat'} target='_blank'>
+              Github
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className='hidden md:flex navbar-end'>
+        <div className='flex gap-3 items-center'>
+          <button id='dummy' type='button' onClick={setDummy} className='btn'>
+            <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
+            <span>Contoh</span>
+          </button>
+          <button id='pdf' type='button' onClick={exportPDF} className='btn'>
+            <Icon icon='material-symbols:download' />
+            <span>Ekspor ke PDF</span>
+          </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
