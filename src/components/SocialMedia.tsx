@@ -15,7 +15,7 @@ export default function SocialMedia() {
             key={key}
             type='text'
             label={key.charAt(0).toUpperCase() + key.slice(1)}
-            icon={socialMediaIcons[index]}
+            icon={socialMediaIcons[index].icon}
             value={data.socialLinks[key as keyof typeof data.socialLinks]}
             onChange={(e) =>
               setData({

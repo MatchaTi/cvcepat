@@ -1,3 +1,5 @@
+import { SocialLinks } from './social';
+
 export interface PersonalInfoType {
   personalInfo: {
     fullName: string;
@@ -8,13 +10,7 @@ export interface PersonalInfoType {
   };
   bio: string;
   photo?: string;
-  socialLinks: {
-    linkedin: string;
-    github: string;
-    twitter: string;
-    facebook: string;
-    instagram: string;
-  };
+  socialLinks: SocialLinks;
   education: Array<{
     degree: string;
     institute: string;
