@@ -47,6 +47,11 @@ export default function Navbar() {
                 <Link to={'/panduan'}>Panduan</Link>
               </li>
               <li>
+                <a href={'https://github.com/MatchaTi/cvcepat'} target='_blank'>
+                  Github
+                </a>
+              </li>
+              <li>
                 <button type='button' onClick={setDummy} className='btn'>
                   <Icon icon={isDummyData ? 'charm:circle-tick' : 'material-symbols:circle-outline'} />
                   <span>Contoh</span>
@@ -75,6 +80,11 @@ export default function Navbar() {
             </li>
             <li id='panduan' className={clsx('opacity-50', location.pathname === '/panduan' && 'opacity-100')}>
               <Link to={'/panduan'}>Panduan</Link>
+            </li>
+            <li className='opacity-50'>
+              <a href={'https://github.com/MatchaTi/cvcepat'} target='_blank'>
+                Github
+              </a>
             </li>
           </ul>
         </div>
