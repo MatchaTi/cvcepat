@@ -41,6 +41,13 @@ export const driverObj = driver({
       },
     },
     {
+      element: '#github',
+      popover: {
+        title: 'Github',
+        description: 'Kunjungi repositori Github untuk kontribusi pada aplikasi ini.',
+      },
+    },
+    {
       element: '#dummy',
       popover: {
         title: 'Dummy Data',

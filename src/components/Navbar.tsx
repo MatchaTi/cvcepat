@@ -80,7 +80,7 @@ export default function Navbar() {
           <li id='panduan' className={clsx('opacity-50', location.pathname === '/panduan' && 'opacity-100')}>
             <Link to={'/panduan'}>Panduan</Link>
           </li>
-          <li className='opacity-50'>
+          <li id='github' className='opacity-50'>
             <a href={'https://github.com/MatchaTi/cvcepat'} target='_blank'>
               Github
             </a>
