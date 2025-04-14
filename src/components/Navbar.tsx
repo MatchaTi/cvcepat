@@ -66,7 +66,7 @@ export default function Navbar() {
         </div>
         <Link id='home' to={'/'} className='flex gap-1 items-center'>
           <Icon icon='mynaui:lightning-solid' className='text-dark-blue' />
-          <span className='text-2xl font-bold'>CVCepat</span>
+          <span className='text-2xl font-bold'>CVCEPAT</span>
         </Link>
       </div>
       <div className='hidden lg:flex navbar-center'>
