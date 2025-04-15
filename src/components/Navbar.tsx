@@ -71,6 +71,9 @@ export default function Navbar() {
       </div>
       <div className='hidden lg:flex navbar-center'>
         <ul className='menu menu-horizontal'>
+          <li id='beranda' className={clsx('opacity-50', location.pathname === '/' && 'opacity-100')}>
+            <Link to={'/'}>Beranda</Link>
+          </li>
           <li id='form' className={clsx('opacity-50', location.pathname === '/form' && 'opacity-100')}>
             <Link to={'/form'}>Form</Link>
           </li>
