@@ -20,6 +20,13 @@ export const driverObj = driver({
       },
     },
     {
+      element: '#beranda',
+      popover: {
+        title: 'Beranda',
+        description: 'Kembali ke halaman utama aplikasi.',
+      },
+    },
+    {
       element: '#form',
       popover: {
         title: 'Form',
