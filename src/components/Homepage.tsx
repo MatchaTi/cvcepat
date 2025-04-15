@@ -19,7 +19,10 @@ export default function Homepage() {
 
 function Hero() {
   return (
-    <section className='flex flex-col gap-6 justify-center items-center -mt-36 w-full h-screen text-center text-balance'>
+    <section className='flex relative flex-col gap-6 justify-center items-center -mt-36 w-full h-screen text-center -z-10 text-balance'>
+      <div className='absolute top-1/2 left-1/2 w-40 h-40 rounded-full -translate-x-1/2 -z-10 -translate-y-1/2 bg-primary/20 blur-2xl lg:h-100 lg:w-100'></div>
+      <div className='hidden absolute rounded-full lg:block bg-secondary/10 top-1/8 left-1/16 -z-10 h-120 w-120 blur-2xl'></div>
+      <div className='hidden absolute right-0 bottom-0 rounded-full lg:block bg-accent/10 h-150 -z-10 w-150 blur-2xl'></div>
       <div className='p-4 text-2xl rounded lg:p-6 bg-primary w-fit'>
         <Icon icon='mynaui:lightning-solid' />
       </div>
@@ -110,7 +113,7 @@ function WhyItem({
 
 function Steps() {
   return (
-    <section className='py-40 space-y-10 lg:px-40'>
+    <section className='lg:py-40 py-10 space-y-10 lg:px-40'>
       <div className='space-y-2 text-center text-balance'>
         <h2 className='text-2xl font-bold md:text-4xl md:leading-16'>Buat CV-mu dengan Cepat</h2>
         <p>Buat CV keren dengan beberapa langkah mudah.</p>
@@ -199,7 +202,7 @@ function StepItem({
 
 function FAQ() {
   return (
-    <section className='grid gap-6 items-center py-40 lg:grid-cols-2 lg:px-40'>
+    <section className='grid gap-6 items-center py-20 lg:py-40 lg:grid-cols-2 lg:px-40'>
       <div className='space-y-2'>
         <div className='badge badge-primary'>
           <Icon icon='mingcute:question-line' />
@@ -244,7 +247,7 @@ function FAQItem({ title, description }: { title: string; description: string })
 
 function Footer() {
   return (
-    <footer className='pt-40 lg:px-40'>
+    <footer className='lg:pt-40 lg:px-40'>
       <div className='p-6 space-y-4 text-center rounded-lg bg-base-content text-base-100'>
         <h2 className='mx-auto max-w-5xl text-2xl font-bold md:text-5xl text-balance md:leading-16'>
           Mulai perjalanan karirmu dengan CV yang menarik!
