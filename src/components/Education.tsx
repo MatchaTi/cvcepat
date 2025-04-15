@@ -20,9 +20,9 @@ export default function Education() {
           />
           <Input
             type='text'
-            label='Tahun Lulus'
-            placeholder='Tahun Lulus'
-            icon='material-symbols:work-outline'
+            label='Tahun Lulus / Angkatan'
+            placeholder='Tahun Lulus / Angkatan'
+            icon='charm:graduate-cap'
             value={year}
             onChange={(e) => updateEducation(index, 'year', e.target.value)}
           />
@@ -30,7 +30,7 @@ export default function Education() {
             type='text'
             label='Gelar'
             placeholder='Gelar'
-            icon='material-symbols:work-outline'
+            icon='material-symbols:star-outline-rounded'
             value={degree}
             onChange={(e) => updateEducation(index, 'degree', e.target.value)}
           />

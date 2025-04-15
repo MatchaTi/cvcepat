@@ -24,7 +24,7 @@ export default function Experience() {
               type='text'
               label='Jabatan'
               placeholder='Jabatan'
-              icon='material-symbols:work-outline'
+              icon='fluent:position-forward-20-filled'
               value={position}
               onChange={(e) => updateExperience(index, 'position', e.target.value)}
             />
@@ -33,7 +33,7 @@ export default function Experience() {
               type='text'
               label='Durasi'
               placeholder='Durasi'
-              icon='material-symbols:work-outline'
+              icon='material-symbols:calendar-today'
               value={year}
               onChange={(e) => updateExperience(index, 'year', e.target.value)}
             />
