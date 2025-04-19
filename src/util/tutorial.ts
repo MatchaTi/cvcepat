@@ -41,13 +41,6 @@ export const driverObj = driver({
       },
     },
     {
-      element: '#panduan',
-      popover: {
-        title: 'Panduan',
-        description: 'Baca panduan untuk membuat CV yang baik dan benar.',
-      },
-    },
-    {
       element: '#github',
       popover: {
         title: 'Github',

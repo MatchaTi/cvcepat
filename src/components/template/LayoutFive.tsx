@@ -22,9 +22,20 @@ function Header() {
   const { data } = useCVStore();
 
   return (
-    <section className='grid justify-center mb-4 text-center text-neutral-content'>
-      <h1 className='text-3xl font-bold'>{data.personalInfo.fullName}</h1>
-      <h2 className='mb-4 font-semibold'>{data.personalInfo.designation}</h2>
+    <section className='grid justify-center mb-4 text-center'>
+      <section className='space-y-2'>
+        {data.photo ? (
+          <div className='avatar'>
+            <div className='w-16 rounded'>
+              <img src={data.photo} alt='avatar' className='object-cover w-full h-full' />
+            </div>
+          </div>
+        ) : null}
+        <div>
+          <h1 className='text-3xl font-bold'>{data.personalInfo.fullName}</h1>
+          <h2 className='mb-4 font-semibold'>{data.personalInfo.designation}</h2>
+        </div>
+      </section>
 
       <div className='flex gap-4 items-center font-bold text-base-content'>
         <div className='flex gap-1 items-center'>
