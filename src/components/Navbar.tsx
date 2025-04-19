@@ -43,9 +43,6 @@ export default function Navbar() {
               <Link to={'/result'}>Hasil</Link>
             </li>
             <li>
-              <Link to={'/panduan'}>Panduan</Link>
-            </li>
-            <li>
               <a href={'https://github.com/MatchaTi/cvcepat'} target='_blank'>
                 Github
               </a>
@@ -79,9 +76,6 @@ export default function Navbar() {
           </li>
           <li id='hasil' className={clsx('opacity-50', location.pathname === '/result' && 'opacity-100')}>
             <Link to={'/result'}>Hasil</Link>
-          </li>
-          <li id='panduan' className={clsx('opacity-50', location.pathname === '/panduan' && 'opacity-100')}>
-            <Link to={'/panduan'}>Panduan</Link>
           </li>
           <li id='github' className='opacity-50'>
             <a href={'https://github.com/MatchaTi/cvcepat'} target='_blank'>
