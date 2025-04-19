@@ -62,7 +62,7 @@ export default function Navbar() {
           </ul>
         </div>
         <Link id='home' to={'/'} className='flex gap-1 items-center'>
-          <Icon icon='mynaui:lightning-solid' className='text-dark-blue' />
+          <Icon icon='mynaui:lightning-solid' className='text-primary' />
           <span className='text-2xl font-bold'>CVCEPAT</span>
         </Link>
       </div>

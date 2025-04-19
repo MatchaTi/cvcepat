@@ -248,11 +248,11 @@ function FAQItem({ title, description }: { title: string; description: string })
 function Footer() {
   return (
     <footer className='lg:px-40 lg:pt-40'>
-      <div className='p-6 space-y-4 text-center rounded-lg bg-base-content text-base-100'>
-        <h2 className='mx-auto max-w-5xl text-2xl font-bold md:text-5xl text-balance md:leading-16'>
+      <div className='p-6 bg-base-content text-base-100 alert alert-vertical'>
+        <h2 className='max-w-5xl text-2xl font-bold md:text-5xl text-balance md:leading-16'>
           Mulai perjalanan karirmu dengan CV yang menarik!
         </h2>
-        <p className='mx-auto max-w-4xl text-balance'>
+        <p className='max-w-4xl text-balance'>
           Buat CV keren dengan beberapa langkah mudah. Pilih template, isi data, dan ekspor ke PDF — semudah itu!
         </p>
         <Link to='/form' className='btn btn-primary'>
