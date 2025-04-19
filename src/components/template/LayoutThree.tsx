@@ -9,10 +9,20 @@ export default function LayoutThree() {
     <main className='overflow-hidden relative p-10 pt-14 mx-auto text-sm shadow-lg bg-base-100 h-[297mm] min-h-fit w-[210mm] space-y-[18px]'>
       <img src='/circle-1.png' alt='circle-1' className='absolute top-0 right-0 -translate-y-3/5' />
       <img src='/circle-2.png' alt='circle-2' className='absolute bottom-0 left-0 translate-y-3/5' />
-      <div className='space-y-1'>
-        <h1 className='text-3xl font-bold'>{data.personalInfo.fullName}</h1>
-        <h2>{data.personalInfo.designation}</h2>
-      </div>
+
+      <section className='flex gap-4 items-center'>
+        {data.photo ? (
+          <div className='avatar'>
+            <div className='w-16 rounded'>
+              <img src={data.photo} alt='avatar' className='object-cover w-full h-full' />
+            </div>
+          </div>
+        ) : null}
+        <div className='space-y-1'>
+          <h1 className='text-3xl font-bold'>{data.personalInfo.fullName}</h1>
+          <h2>{data.personalInfo.designation}</h2>
+        </div>
+      </section>
 
       <section className='pb-4 space-y-4 border-b border-base-200'>
         <h3 className='flex gap-2 items-center text-lg font-bold text-success'>

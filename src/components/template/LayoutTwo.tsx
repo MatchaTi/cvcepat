@@ -9,8 +9,19 @@ export default function LayoutTwo() {
 
   return (
     <main className='p-10 mx-auto text-sm shadow-lg bg-base-100 h-[297mm] min-h-fit w-[210mm] space-y-[18px]'>
-      <h1 className='text-3xl font-bold'>{data.personalInfo.fullName}</h1>
-      <h2 className='font-semibold text-primary'>{data.personalInfo.designation}</h2>
+      <section className='flex gap-4 items-center'>
+        {data.photo ? (
+          <div className='avatar'>
+            <div className='w-16 rounded'>
+              <img src={data.photo} alt='avatar' className='object-cover w-full h-full' />
+            </div>
+          </div>
+        ) : null}
+        <div>
+          <h1 className='text-3xl font-bold'>{data.personalInfo.fullName}</h1>
+          <h2 className='font-semibold text-primary'>{data.personalInfo.designation}</h2>
+        </div>
+      </section>
 
       <section className='flex flex-wrap gap-4 items-center text-xs'>
         <div className='flex gap-1 items-center'>

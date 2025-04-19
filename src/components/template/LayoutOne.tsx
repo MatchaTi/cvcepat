@@ -8,8 +8,10 @@ export default function LayoutOne() {
     <main className='p-10 mx-auto text-sm shadow-lg bg-base-100 h-[297mm] min-h-fit w-[210mm] space-y-[18px]'>
       <section className='flex gap-4 items-center pb-4 border-b'>
         {data.photo ? (
-          <div className='overflow-hidden w-16 h-16'>
-            <img src={data.photo} alt='avatar' className='object-cover w-full h-full' />
+          <div className='avatar'>
+            <div className='w-16'>
+              <img src={data.photo} alt='avatar' className='object-cover w-full h-full' />
+            </div>
           </div>
         ) : null}
 
