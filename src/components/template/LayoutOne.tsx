@@ -51,8 +51,8 @@ function Education() {
         <div key={index} className='flex gap-3 justify-between items-center mb-1'>
           <div className='flex gap-1 items-center'>
             <div className='ml-2 w-1 h-1 rounded-full bg-base-200'></div>
-            <div className='font-bold'>{institute},</div>
-            <div className='italic'>{degree}</div>
+            <div className='font-bold'>{institute}</div>
+            {degree && <div className='italic'>, {degree}</div>}
           </div>
           <div className='self-end'>{year}</div>
         </div>
@@ -71,8 +71,8 @@ function Experience() {
         <div key={index} className='mb-3'>
           <div className='flex justify-between items-center mb-[6px]'>
             <div className='flex gap-1 items-center'>
-              <div className='font-bold'>{company},</div>
-              <div className='italic'>{position}</div>
+              <div className='font-bold'>{company}</div>
+              {position && <div className='italic'>, {position}</div>}
             </div>
             <div>{year}</div>
           </div>

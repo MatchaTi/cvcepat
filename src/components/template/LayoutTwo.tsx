@@ -66,16 +66,20 @@ function Experience() {
         <div key={index} className='pb-3 space-y-3 border-b border-base-200'>
           <div className='grid grid-cols-4'>
             <h3 className='col-span-2 text-xl italic font-bold'>{position}</h3>
-            <p className='flex gap-1 items-center'>
-              <Icon icon='lucide:briefcase' />
-              <span>{company}</span>
-            </p>
-            <p className='flex gap-1 items-center'>
-              <Icon icon='solar:calendar-outline' />
-              <span>{year}</span>
-            </p>
+            {company && (
+              <p className='flex gap-1 items-center'>
+                <Icon icon='lucide:briefcase' />
+                <span>{company}</span>
+              </p>
+            )}
+            {year && (
+              <p className='flex gap-1 items-center'>
+                <Icon icon='solar:calendar-outline' />
+                <span>{year}</span>
+              </p>
+            )}
           </div>
-          <div className='text-justify'>{description}</div>
+          {description && <div className='text-justify'>{description}</div>}
         </div>
       ))}
     </section>
@@ -113,10 +117,12 @@ function Education() {
               <Icon icon='lucide:book-open' />
               <span>{institute}</span>
             </p>
-            <p className='flex gap-1 items-center'>
-              <Icon icon='solar:calendar-outline' />
-              <span>{year}</span>
-            </p>
+            {year && (
+              <p className='flex gap-1 items-center'>
+                <Icon icon='solar:calendar-outline' />
+                <span>{year}</span>
+              </p>
+            )}
           </div>
         </div>
       ))}
