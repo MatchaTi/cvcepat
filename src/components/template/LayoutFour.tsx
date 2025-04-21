@@ -73,7 +73,7 @@ function Experience() {
         <div key={index} className='space-y-1'>
           <div className='text-xs'>{year}</div>
           <div className='text-lg font-bold'>
-            {company} - {position}
+            {company} {position && '- ' + position}
           </div>
           <div className='leading-relaxed'>{description}</div>
         </div>

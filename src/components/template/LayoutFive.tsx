@@ -77,12 +77,14 @@ function Education() {
         {data.education.map(({ institute, degree, year }, index) => (
           <div key={index} className='space-y-2'>
             <h4 className='font-bold'>
-              {institute} - {degree}
+              {institute} {degree && '- ' + degree}
             </h4>
-            <p className='flex gap-2 items-center text-xs'>
-              <Icon icon='solar:calendar-linear' />
-              <span>{year}</span>
-            </p>
+            {year && (
+              <p className='flex gap-2 items-center text-xs'>
+                <Icon icon='solar:calendar-linear' />
+                <span>{year}</span>
+              </p>
+            )}
           </div>
         ))}
       </div>
@@ -100,12 +102,14 @@ function Experience() {
         {data.experience.map(({ company, position, year, description }, index) => (
           <div key={index} className='space-y-2'>
             <h4 className='font-bold'>
-              {company} - {position}
+              {company} {position && '- ' + position}
             </h4>
-            <p className='flex gap-2 items-center text-xs'>
-              <Icon icon='solar:calendar-linear' />
-              <span>{year}</span>
-            </p>
+            {year && (
+              <p className='flex gap-2 items-center text-xs'>
+                <Icon icon='solar:calendar-linear' />
+                <span>{year}</span>
+              </p>
+            )}
             <p>{description}</p>
           </div>
         ))}
