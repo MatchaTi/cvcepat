@@ -18,12 +18,16 @@ export default function LayoutOne() {
         <div className={clsx({ 'text center flex w-full flex-col items-center': !data.photo })}>
           <h2 className='mb-2 text-3xl font-bold uppercase textcenter text-balance'>{data.personalInfo.fullName}</h2>
 
-          <div className='flex gap-3 justify-center items-center'>
+          <div className='flex flex-wrap gap-3 justify-center items-center'>
             <div>{data.personalInfo.address}</div>
             <div className='w-1 h-1 rounded-full bg-base-200'></div>
             <div>{data.personalInfo.email}</div>
             <div className='w-1 h-1 rounded-full bg-base-200'></div>
             <div>{data.personalInfo.phone}</div>
+            <div className='w-1 h-1 rounded-full bg-base-200'></div>
+            <div>{data.socialLinks.github}</div>
+            <div className='w-1 h-1 rounded-full bg-base-200'></div>
+            <div>{data.socialLinks.linkedin}</div>
           </div>
         </div>
       </section>
